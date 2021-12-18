@@ -1,0 +1,122 @@
+@mixin elements-bg-home($src:'', $width:'', $height:'', $top:'', $left:'', $nb: ''){
+  @if($nb) {
+    content:'#{$nb}';
+  }
+  @if($src) {
+    background-image: image('decorations/elements/#{$src}@3x.png');
+    @include mq($until: l){
+      background-image: image('decorations/elements/#{$src}.png');
+    }
+  }
+
+  width: #{$width + 0px};
+  max-width: #{$width + 0px};
+  height: #{$height + 0px};
+  top: #{$top + 0px};
+  left: #{$left + 0px};
+
+  @content;
+}
+@mixin elements-bg($src:'', $width:'', $height:'', $top:'', $left:'', $nb: ''){
+  @if($nb) {
+    content:'#{$nb}';
+  }
+  @if($src) {
+    background-image: image('decorations/elements/#{$src}@3x.png');
+    @include mq($until: l){
+      background-image: image('decorations/elements/#{$src}.png');
+    }
+  }
+
+
+  width: calc((#{$width} / 1920) * 100%);
+  max-width: #{$width + 0px};
+  height: #{$height + 0px};
+
+
+  top: #{$top + 0px};
+  // left: calc((#{$left} / 1920) * 100%);
+  right: calc(50% + #{((1920/2) - $left - $width) + 0px});
+
+  @include mq($from: l){
+    width: #{$width + 0px};
+    max-width: #{$width + 0px};
+    height: #{$height + 0px};
+    top: #{$top + 0px};
+    // right:  calc(100% - (#{$left} / 1920) * 100%);
+    right: calc(50% + #{((1920/2) - $left - $width) + 0px});
+
+  }
+  @content;
+}
+
+@mixin elements-before($src:''){
+  @if($src) {
+    background-image: image('decorations/elements/#{$src}@3x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    @include mq($until: l){
+      background-image: image('decorations/elements/#{$src}.png');
+    }
+  }
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+@mixin coordinate($top, $left){
+  top: calc(((#{$top} / 1184) * 100vw));
+  left: calc((#{$left} / 1184) * 100%);
+}
+@mixin homeCoordinate($topXl, $leftXl, $topXs, $leftXs){
+  top: calc(((#{$topXl} / 1184) * 100vw));
+  left: calc((#{$leftXl} / 1184) * 100%);
+
+  @include mq($until:m){
+    left: calc(((#{$leftXs} / 375) * 100vw));
+  }
+}
+
+
+@mixin SpriteAnimation($position, $start:0) {
+  $animation-name: unique-id();
+  animation-name: $animation-name;
+  @keyframes #{$animation-name} {
+    0% {
+      background-position: #{$start} 0;
+    }
+    100% {
+      background-position: #{$position} 0;
+    }
+  }
+}
+
+@mixin SpriteAnimationTransition($position, $start, $bg_start, $bg_end) {
+  $animation-name: unique-id();
+  animation-name: $animation-name;
+  @keyframes #{$animation-name} {
+    0%, 1% {
+      background-color: $bg_start;
+      background-position: #{$start} 0;
+    }
+    2%{
+      background-color: transparent;
+      background-position: #{$start} 0;
+    }
+    99%{
+      background-color: transparent;
+      background-position: #{$position} 0;
+    }
+    99%, 100% {
+      background-color: $bg_end;
+      background-position: #{$position} 0;
+    }
+  }
+}

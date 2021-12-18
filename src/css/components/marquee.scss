@@ -1,0 +1,177 @@
+$move-initial: calc(+25%);
+$move-final: calc(-50%);
+
+//.section-marquee {
+//  margin: 15rem 0 15rem 0;
+//
+//  .tapes-container {
+//    //position: absolute;
+//    //left: -2.5%;
+//    transform: translateX(-2.5%);
+//    font-size: calc(25px + (80 - 25) * ((100vw - 320px) / (1900 - 320)));
+//    text-transform: uppercase;
+//    line-height: 1.2;
+//  }
+//  .first-tape-wrapper{
+//    transform: rotate(7deg);
+//  }
+//  .tapes-container .first-tape-wrapper > .first-tape {
+//    background: var(--clr-white);
+//    padding: 0 1rem;
+//    //transform: rotate(7deg);
+//    transform-origin: center center;
+//    width: max-content;
+//
+//    span {
+//      //mix-blend-mode: normal;
+//      color: var(--clr-black);
+//    }
+//  }
+//  .second-tape-wrapper{
+//    transform: rotate(-10deg);
+//  }
+//  .tapes-container .second-tape-wrapper > .second-tape {
+//    background: var(--clr-secondary);
+//    padding: 0 1rem;
+//    transform: rotate(-10deg);
+//    transform-origin: center center;
+//    width: max-content;
+//
+//    span {
+//      //mix-blend-mode: normal;
+//      color: var(--clr-black);
+//    }
+//  }
+//
+//  .third-tape-wrapper{
+//    transform: rotate(15deg);
+//  }
+//  .tapes-container > .third-tape {
+//    background: var(--clr-black);
+//    border-top: 1px solid #ffffff;
+//    border-bottom: 1px solid #ffffff;
+//
+//    padding: 0 1rem;
+//    transform: rotate(15deg);
+//    transform-origin: center center;
+//    width: max-content;
+//
+//    span {
+//      //mix-blend-mode: normal;
+//      color: var(--clr-white);
+//
+//    }
+//  }
+//
+//  .tapes-container > .third-tape {
+//    span {
+//      span:after {
+//        content: ' ';
+//        display: inline-block;
+//        text-align: right;
+//        background-image: url('../../assets/icons/starSmall.svg');
+//        background-size: 60px 60px;
+//        height: 60px;
+//        width: 60px;
+//        margin-left: 1.0rem;
+//      }
+//    }
+//  }
+//
+//  .tapes-container > .second-tape, .tapes-container > .first-tape {
+//
+//    span {
+//      span:after {
+//        content: ' ';
+//        display: inline-block;
+//        text-align: right;
+//        background-image: url('../../assets/icons/starSmallBlack.svg');
+//        background-size: 60px 60px;
+//        height: 60px;
+//        width: 60px;
+//        margin-left: 1.0rem;
+//      }
+//    }
+//  }
+//
+//
+//  //  content: ' ';
+//  //  display: inline-block;
+//  //  text-align: right;
+//  //  background-image: url('../assets/icons/right-arrow.svg');
+//  //  background-size: 28px 28px;
+//  //  height: 28px;
+//  //  width: 28px;
+//}
+//
+
+
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  &.animate .marquee__inner {
+    animation-play-state: running !important;
+  }
+  &.animate .marquee__inner.backwards {
+    animation-play-state: running !important;
+  }
+
+  .marquee__inner {
+    width: fit-content;
+    //display: flex;
+    //position: relative;
+    transform: translate3d($move-initial, 0, 0);
+    animation: marquee 45s linear infinite;
+    animation-play-state: paused;
+    @media (min-width: $layout-breakpoint-large) {
+      transform: translate3d(calc(-25% + 10vw), 0, 0);
+      animation: marquee-lg 120s linear infinite;
+      animation-play-state: paused;
+    }
+  }
+  .marquee__inner.backwards{
+    @media (min-width: $layout-breakpoint-large) {
+      transform: translate3d(calc(25% - 10vw), 0, 0);
+      animation: marquee-lg-backwards 120s linear infinite;
+      animation-play-state: paused;
+    }
+  }
+
+  .row-title {
+    padding: 0 8vw;
+    @media (min-width: $layout-breakpoint-large) {
+      padding: 0 10vw;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d($move-initial, 0, 0);
+  }
+
+  100% {
+    transform: translate3d($move-final, 0, 0);
+  }
+}
+
+@keyframes marquee-lg {
+  0% {
+    transform: translate3d(calc(-25% + 10vw), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-50% + 10vw), 0, 0);
+  }
+}
+
+@keyframes marquee-lg-backwards {
+  0% {
+    transform: translate3d(calc(25% - 50vw), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(50% - 25vw), 0, 0);
+  }
+}

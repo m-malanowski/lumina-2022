@@ -1,0 +1,73 @@
+/*! locomotive-scroll v3.5.4 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+/* Specifying the scroll container manually */
+.has-scroll-smooth #___gatsby,
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh;
+}
+
+.c-scrollbar {
+    z-index: 1000001;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100vh;
+    transform-origin: center right;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    transform: scaleX(.45);
+    mix-blend-mode: difference;
+}
+.c-scrollbar:hover {
+    transform: scaleX(1.2);
+    /*cursor: url("../../assets/icons/pointerMIckey.png"), pointer;*/
+
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+    opacity: 1;
+}
+
+.c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--clr-secondary);
+    opacity: 0.95;
+    width: 10px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: url("../../assets/icons/pointerMIckey.png"), pointer;
+    /*z-index: 10;*/
+    z-index: 1001;
+
+    /*cursor: -webkit-grab;*/
+    /*cursor: grab;*/
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+    /*cursor: -webkit-grabbing;*/
+    /*cursor: grabbing;*/
+
+    cursor: url("../../assets/icons/pointerMIckey.png"), pointer;
+
+}
+::-webkit-scrollbar {
+    cursor: url("../../assets/icons/pointerMIckey.png"), pointer;
+
+}
