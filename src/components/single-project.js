@@ -15,7 +15,6 @@ import malva5 from "../assets/imgs/Kopelat/5.png"
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 
 import arrowDown from "../assets/icons/arrowDown.svg"
-import ServicesSlider from "./ServicesSlider"
 import arrow from "../assets/icons/right-arrow.svg"
 import orbitMain from "../assets/icons/orbitMainView.png"
 import Worldwide from "./Worldwide"

@@ -19,25 +19,21 @@ const ServicesSlider = (props) => {
   `)
 
 
-  const [sliderRef] = useKeenSlider({ slidesPerView: 4, spacing: 50,  centered: false, mode: "free-snap",
-    breakpoints: {
-      "(max-width: 768px)": {
-        slidesPerView: 2,
-        mode: "free-snap",
-      },
-      "(max-width: 400px)": {
-        slidesPerView: 1,
-        mode: "free-snap",
-      },
-      "(max-width: 120px)": {
-        slidesPerView: 3,
-        mode: "free-snap",
-      },
-      // "(min-width: 1200px)": {
-      //   slidesPerView: 3,
-      //   mode: "free-snap",.keen-slider__slide
-      // },
-    },
+  const [sliderRef] = useKeenSlider({    mode: "free-snap",  slides: { perView: 4, spacing: 50},
+    // breakpoints: {
+    //   "(max-width: 768px)": {
+    //     slidesPerView: 2,
+    //     mode: "free-snap",
+    //   },
+    //   "(max-width: 400px)": {
+    //     slidesPerView: 1,
+    //     mode: "free-snap",
+    //   },
+    //   "(max-width: 120px)": {
+    //     slidesPerView: 3,
+    //     mode: "free-snap",
+    //   },
+    // },
   })
 
   return (
@@ -46,7 +42,7 @@ const ServicesSlider = (props) => {
 
 
         {query.allStrapiArticles.nodes.map(article => (
-          <div className="keen-slider__slide number-slide1 service-slide">
+          <div key={article.id} className="keen-slider__slide number-slide1 service-slide">
             <Link to={"/artykuly/" + article.Slug}>
 
             <h5>{article.Date}</h5>

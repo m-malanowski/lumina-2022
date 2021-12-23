@@ -227,7 +227,7 @@ const HomePage = () => {
 
                   <TriggerImg>
                     {/*<div className="star"></div>*/}
-                    <img src={trueStar} alt="" />
+                    <img className='rotating-star' src={trueStar} width={30} alt="" />
                   </TriggerImg>
 
                   <TriggerText threshold=".35" delay=".35">

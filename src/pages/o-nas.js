@@ -21,6 +21,7 @@ import ContactSubsec from "../components/ContactSubsec"
 import AboutSectionAccordion from "../components/AboutSectionAccordion"
 import { Link } from "gatsby"
 import Foooter from "../components/Foooter"
+import trueStar from "../assets/icons/true-star.svg"
 
 
 // ...GatsbyImageSharpFluid
@@ -95,7 +96,8 @@ const ONas = () => {
               <div className="subsec-span-wprapper">
 
                 <TriggerImg threshold="1" delay=".4">
-                  <div className="star"></div>
+                  {/*<div className="star"></div>*/}
+                  <img className='rotating-star' src={trueStar} width={30} alt="" />
                 </TriggerImg>
 
                 <TriggerText threshold="1" delay=".5">
