@@ -35,14 +35,14 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-0J0X0PC2C5" // Google Analytics / GA
-        ],
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [
+    //       "G-0J0X0PC2C5" // Google Analytics / GA
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-source-strapi`,
       options: {
@@ -51,7 +51,8 @@ module.exports = {
           // contentTypes : `projects`,
         //   singleType : `about`
         //  ONLY ADD TO ARRAY IF YOU HAVE DATA IN STRAPI !!!!
-        collectionTypes: [`projects`],
+        collectionTypes: [`projects`, `articles`],
+
         // contentTypes: [`projects`],
 
         // singleTypes: [],
@@ -66,7 +67,7 @@ module.exports = {
         background_color: `#00579d`,
         theme_color: `#e8eef3`,
         display: `standalone`,
-        icon: `src/assets/imgs/favIcon.png`,
+        icon: `src/assets/favicon.png`,
         icon_options: {
           purpose: `any maskable`,
         },

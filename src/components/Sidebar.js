@@ -8,6 +8,7 @@ import mickyHand3 from "../assets/imgs/smallStarBlack.svg"
 import mickyHand4 from "../assets/icons/asterisk.svg"
 import { Link } from "gatsby"
 import { gsap } from "gsap";
+import trueStart from "../assets/icons/true-star.svg"
 // import elo from "../assets/imgs/stickerLogo.png"
 import {
   staggerText,
@@ -76,7 +77,7 @@ const Sidebar = ({toggleSideBar, isOpen}) => {
 
               >O nas</Link>
               {/*<a className="menu__item-link">Studio</a>*/}
-              <img className="menu__item-img" src={mickyHand1} />
+              <img className="menu__item-img" src={trueStart} />
               <div className="marquee">
                 <div className="marquee__inner">
                   <span>O nas - O nas - O nas - O nas - O nas - O nas - O nas</span>
@@ -88,7 +89,7 @@ const Sidebar = ({toggleSideBar, isOpen}) => {
                     onClick={toggleSideBar}
                     ref={el => (line2.current = el)}
               >Usługi</Link>
-              <img className="menu__item-img" src={mickyHand1}  />
+              <img className="menu__item-img" src={trueStart}  />
               <div className="marquee">
                 <div className="marquee__inner">
                   <span>Usługi - Usługi - Usługi - Usługi - Usługi - Usługi - Usługi</span>
@@ -100,7 +101,7 @@ const Sidebar = ({toggleSideBar, isOpen}) => {
                     onClick={toggleSideBar}
                     ref={el => (line3.current = el)}
               >Projekty</Link>
-              <img className="menu__item-img" src={mickyHand1} />
+              <img className="menu__item-img" src={trueStart} />
               <div className="marquee">
                 <div className="marquee__inner">
 							<span
@@ -116,7 +117,7 @@ const Sidebar = ({toggleSideBar, isOpen}) => {
                     ref={el => (line4.current = el)}
 
               >Kontakt</Link>
-              <img className="menu__item-img" src={mickyHand1} />
+              <img className="menu__item-img" src={trueStart} />
               <div className="marquee">
                 <div className="marquee__inner">
 							<span
@@ -133,7 +134,7 @@ const Sidebar = ({toggleSideBar, isOpen}) => {
                 className="social-link blog-link link link-black link--kale"
                 onClick={toggleSideBar}
                 >
-                <img width="16" className="mr-1 rotating-star" src={mickyHand3}  />
+                <img width="16" className="mr-1 rotating-star" src={trueStart}  />
                 BLOG
               </Link>
             </div>

@@ -1,0 +1,20 @@
+.contact-wrapper{
+  position: relative;
+  .drop-line, .address{
+     h2{
+       font-size: calc(20px + (65 - 20) * ((100vw - 320px) / (1900 - 320)));
+       margin-bottom: 1.5rem;
+     }
+    ul{
+      padding: 0;
+      li{
+        font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1900 - 320)));
+        padding: .25rem;
+      }
+    }
+  }
+  .address{
+    margin: 5rem 0;
+  }
+
+}

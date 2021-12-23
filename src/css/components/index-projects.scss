@@ -1,0 +1,97 @@
+.new-index-projects {
+  margin: 5rem 0;
+  h2{
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .globe{
+    padding: 0 0 5rem 0;
+    animation: squiggly-anim .25s steps(2) infinite;
+    display: inline-block;
+  }
+}
+
+.new-index-projects{
+  .projects-wrapper{
+    margin: 5rem 0 0 0;
+    padding: 5rem 0;
+    width: 90%;
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //column-gap: 2.5rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    h5{
+      position: relative;
+      z-index: 1;
+      padding: 0 1.5rem 1.5rem 0;
+      font-size: calc(18px + (80 - 18) * ((100vw - 320px) / (1900 - 320)));
+      //font-family: var(--ff-secondary);
+      font-family: var(--ff-secondary-bold);
+      //&:nth-of-type(odd){
+      &:after{
+        content: '/';
+        font-family: var(--ff-secondary-lig);
+      }
+      //}
+      &:hover{
+        color: var(--clr-secondary);
+        //cursor: url("../assets/icons/pointer.png"), pointer;
+        cursor: pointer;
+        &:after{
+          color: var(--clr-white);
+        }
+        span{
+          color: var(--clr-white);
+        }
+      }
+    }
+    span{
+      font-size: calc(18px + (30 - 18) * ((100vw - 320px) / (1900 - 320)));
+      font-family: var(--ff-primary);
+      font-style: italic;
+      vertical-align: text-top;
+    }
+  }
+  .project-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+
+    img{
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      right: 0;
+      width: 600px;
+      height: auto;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      pointer-events: none;
+      z-index: 1;
+      transform: rotateZ(0deg);
+      transition: transform 0.3s ease-in-out;
+      transition-delay: 50ms;
+      &.is-active{
+        visibility: visible;
+        opacity: 1;
+        transform: rotateZ(5deg);
+        transition: all 0.5s;
+        transition-delay: 150ms;
+        filter: blur(0px);
+      }
+      &.no-active{
+        filter: blur(5px);
+        transform: rotateZ(0deg);
+        transition: all 0.3s;
+        transition-delay: 50ms;
+      }
+    }
+  }
+}

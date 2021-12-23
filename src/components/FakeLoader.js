@@ -8,9 +8,7 @@ const FakeLoader = () => {
       className="fake-loader-wrapper"
       initial={{ opacity: 1 }}
       animate={{
-        // display: 'none',
         opacity: 0,
-        // x: "-100%",
         transition: { delay: 3.2, when: "beforeChildren", duration: .4 },
         transitionEnd: {
           display: "none"

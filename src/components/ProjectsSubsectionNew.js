@@ -1,91 +1,10 @@
-import React, { useCallback, useLayoutEffect,  Suspense  } from "react"
-import { useEffect, useState, useRef } from "react"
+import React, { useCallback, useLayoutEffect  } from "react"
+import { useEffect, useState } from "react"
 import TriggerText from "../components/TriggerText"
 import TriggerLine from "./TriggerLine"
 import ProjectsData from "./ProjectsData"
 import { Link } from "gatsby"
-//
-// import * as THREE from "three";
-// import { Canvas, extend, useFrame, useLoader } from "@react-three/fiber";
-// import { shaderMaterial } from "@react-three/drei";
-// import glsl from "babel-plugin-glsl/macro";
-
-// const WaveShaderMaterial = shaderMaterial(
-//   // Uniform
-//   {
-//     uTime: 0,
-//     uColor: new THREE.Color(0.0, 0.0, 0.0),
-//     uTexture: new THREE.Texture()
-//   },
-//   // Vertex Shader
-//   glsl`
-//     precision mediump float;
-//
-//     varying vec2 vUv;
-//     varying float vWave;
-//
-//     uniform float uTime;
-//
-//     #pragma glslify: snoise3 = require(glsl-noise/simplex/3d.glsl);
-//
-//     void main() {
-//       vUv = uv;
-//
-//       vec3 pos = position;
-//       float noiseFreq = 2.0;
-//       float noiseAmp = 0.4;
-//       vec3 noisePos = vec3(pos.x * noiseFreq + uTime, pos.y, pos.z);
-//       pos.z += snoise3(noisePos) * noiseAmp;
-//       vWave = pos.z;
-//
-//       gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-//     }
-//   `,
-//   // Fragment Shader
-//   glsl`
-//     precision mediump float;
-//
-//     uniform vec3 uColor;
-//     uniform float uTime;
-//     uniform sampler2D uTexture;
-//
-//     varying vec2 vUv;
-//     varying float vWave;
-//
-//     void main() {
-//       float wave = vWave * 0.2;
-//       vec3 texture = texture2D(uTexture, vUv + wave).rgb;
-//       gl_FragColor = vec4(texture, 1.0);
-//     }
-//   `
-// );
-//
-// extend({ WaveShaderMaterial });
-//
-// const Wave = () => {
-//   const ref = useRef();
-//   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
-//
-//   const [image] = useLoader(THREE.TextureLoader, [
-//     "https://images.unsplash.com/photo-1604011092346-0b4346ed714e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80"
-//   ]);
-//
-//   return (
-//     <mesh>
-//       <planeBufferGeometry args={[0.4, 0.6, 16, 16]} />
-//       <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image} />
-//     </mesh>
-//   );
-// };
-// const Scene = () => {
-//   return (
-//     <Canvas camera={{ fov: 12, position: [0, 0, 5] }}>
-//       <Suspense fallback={null}>
-//         <Wave />
-//       </Suspense>
-//     </Canvas>
-//   );
-// };
+import TriggerImg from "./TriggerImg"
 
 
 const useMousePosition = () => {
@@ -139,16 +58,45 @@ const ProjectsSubsection = () => {
       {/*<ImgPlane/>*/}
       <section className="section-more-projects" >
 
-        <div className="subsec-header mb-5">
+        <div className="new-subsec-body">
+          <div className="subsec-span-wprapper">
+
+            <TriggerImg>
+              <div className="star"></div>
+            </TriggerImg>
+
+            <TriggerText threshold=".35" delay=".35">
+                    <span
+                      data-scroll
+                      data-scroll-speed="-3.5"
+                      className="subsec-span">Why we do what we do</span>
+            </TriggerText>
+          </div>
+          <TriggerText threshold=".45" delay=".35">
+            <p
+              data-scroll
+              data-scroll-speed="-.5"
+            >
+              Brooklyn man bun intellige dard slow-carb flannel. Ramps
+              church-key umami dreamcatcher <em>jean chips </em>
+            </p>
+          </TriggerText>
+
+        </div>
+
+
+        <div className="subsec-header">
           <TriggerText threshold=".5" delay=".5">
-            <h5 className="">02.</h5>
+            <h2 className="subsec-title">Artykuły</h2>
+            {/*<br />*/}
+            {/*<p>Zapoznaj się z artykułami</p>*/}
           </TriggerText>
           <TriggerText threshold=".5" delay=".5">
-            <h2 className="subsec-title">Projekty</h2>
+            <span className="">03.</span>
           </TriggerText>
         </div>
 
-        <div className="projects-wrapper">
+        <div className="works-page-projects-wrapper">
 
           {ProjectsData.map(({title, year, imgPath, services}, index) => (
             <Desc key={index}  title={title} year={year} imgPath={imgPath} services={services} setActiveIndex={setActiveIndex} index={index} />
@@ -164,10 +112,7 @@ const ProjectsSubsection = () => {
             })}
           </div>
 
-          {/*<Scene />*/}
-
         </div>
-
       </section>
     </>
   )
@@ -196,9 +141,9 @@ export const Desc = ({title, year, services, imgPath, setActiveIndex, index}) =>
         </TriggerText>
       </div>
 
-      <TriggerLine threshold=".5" delay=".5">
-        <hr className="animated" />
-      </TriggerLine>
+      {/*<TriggerLine threshold=".5" delay=".5">*/}
+      {/*  <hr className="animated" />*/}
+      {/*</TriggerLine>*/}
     </div>
   )
 }
@@ -207,15 +152,14 @@ export const Image = ({src, active, x, y, alt}) => {
   const [ref, {width, height}] = useSize();
   return(
     <>
-
       <img
         width="400px"
-        className={ active ? 'is-active' : ''}
+        className={ active ? 'is-active' : 'no-active'}
         src={src}
         ref={ref}
         alt={alt}
         style={{
-          transform: `translate(${ x - width/3 }px, ${ y - height/2 }px)`,
+          transform: `translate(${ x - width/10 }px, ${ y - height/1 }px)`,
         }}
       />
     </>

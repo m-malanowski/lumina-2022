@@ -44,22 +44,25 @@ const commonVariants = {
 
 const layoutVariants = {
   initial: {
-    opacity: 0
+    opacity: 0,
+    filter: 'blur(100px)'
   },
   enter: {
     opacity: 1,
+    filter: 'blur(0px)',
     transition: {
-      duration: .4,
-      delay: .1,
+      duration: .6,
+      delay: .2,
       // when: "beforeChildren",
       ease: [0.6, 0.01, -0.05, 0.9]
     }
   },
   exit: {
     opacity: 0,
+    filter: 'blur(100px)',
     transition: {
-      delay: 1,
-      duration: .4,
+      delay: .45,
+      duration: .8,
       ease: [0.6, 0.01, -0.05, 0.9]
     }
   }

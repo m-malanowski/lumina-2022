@@ -91,7 +91,6 @@ import { Link } from "gatsby"
 // };
 
 
-
 const IndexProjects = () => {
   const [activeIndex, setActiveIndex] = React.useState(-1)
 
@@ -112,7 +111,6 @@ const IndexProjects = () => {
           })}
 
         </div>
-
 
       </div>
     </>

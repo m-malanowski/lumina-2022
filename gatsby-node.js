@@ -3,7 +3,7 @@ const path = require("path")
 // create pages dynamically
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const result = await graphql(`
+  const resultForProjects = await graphql(`
     {
       projects: allStrapiProjects {
         nodes {
@@ -12,13 +12,32 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
+  const resultForArticles = await graphql(`
+    {
+      allStrapiArticles {
+        nodes {
+          Slug
+        }
+      }
+    }
+  `)
 
-  result.data.projects.nodes.forEach(project => {
+  resultForProjects.data.projects.nodes.forEach(project => {
     createPage({
       path: `/agencja-interaktywna-realizacje/${project.slug}`,
       component: path.resolve(`src/templates/projects-template.js`),
       context: {
         slug: project.slug,
+      },
+    })
+  })
+
+  resultForArticles.data.allStrapiArticles.nodes.forEach(article => {
+    createPage({
+      path: `/artykuly/${article.Slug}`,
+      component: path.resolve(`src/templates/blog-template.js`),
+      context: {
+        Slug: article.Slug,
       },
     })
   })

@@ -1,0 +1,133 @@
+/*
+===============
+Fake Loader && Page Transition
+===============
+*/
+
+.initialLogo {
+  overflow: visible;
+  //stroke: #fff;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  transform: scale(.8);
+  //stroke-dasharray: 100;
+  @include for-phone-only {
+    transform: scale(1);
+  }
+}
+
+//.page-transition {
+//  left: 0;
+//  top: 0;
+//  width: 0%;
+//  height: 100vh;
+//  background-color: var(--clr-primary-4);
+//  z-index: 20001 !important;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  position: absolute;
+//  overflow: hidden;
+//}
+
+//.page-transition {
+//padding-left: 0;
+//padding-right: 0;
+//padding-top: 0;
+//width: 0;
+//height: 100vh;
+//background-color: var(--clr-primary-5);
+//z-index: 20001 !important;
+//}
+
+.fake-loader-wrapper {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--clr-black);
+  z-index: 1120001 !important;
+  display: grid;
+  place-items: center;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
+  position: absolute;
+  overflow: hidden;
+  flex-direction: column;
+
+  //TEMPORARY
+  transform: translateY(-30%);
+
+  .svg-container {
+    //display: flex;
+    //flex-direction: column;
+    //transform: scale(.8);
+
+    @include for-phone-only {
+      //transform: scale(1);
+      img:nth-of-type(1) {
+        width: 80%;
+        height: auto;
+      }
+      img:nth-of-type(2) {
+        width: 60%;
+        height: auto;
+      }
+    }
+  }
+
+  img:first-of-type {
+    margin-top: 2rem;
+  }
+
+  img {
+    margin-top: 1rem;
+    //display: block;
+    text-align: center;
+    //height: auto;
+    //width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  //p {
+  //  overflow-y: hidden;
+  //  letter-spacing: 2px;
+  //  color: #fff !important;
+  //  font-family: var(--font-primary-bold);
+  //  font-size: 22px;
+  //  font-weight: bold;
+  //}
+
+  //img {
+  //  width: 120px;
+  //}
+
+  &::before {
+    background-image: url(../assets/grain.png);
+    background-size: 280px 280px;
+    background-repeat: repeat;
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: .2;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    animation: grain 10s steps(10) infinite;
+    z-index: -1;
+
+  }
+}
+
+
+.st0 {
+  fill: #FFFFFF;
+}
+
+.st1 {
+  fill: #CEFF00;
+}

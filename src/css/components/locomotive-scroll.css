@@ -53,7 +53,7 @@ html.has-scroll-dragging {
     width: 10px;
     border-radius: 10px;
     margin: 2px;
-    cursor: url("../../assets/icons/pointerMIckey.png"), pointer;
+    /*cursor: url("../../assets/icons/pointerMIckey.png"), pointer;*/
     /*z-index: 10;*/
     z-index: 1001;
 
@@ -64,10 +64,10 @@ html.has-scroll-dragging {
     /*cursor: -webkit-grabbing;*/
     /*cursor: grabbing;*/
 
-    cursor: url("../../assets/icons/pointerMIckey.png"), pointer;
+    /*cursor: url("../../assets/icons/pointerMIckey.png"), pointer;*/
 
 }
-::-webkit-scrollbar {
-    cursor: url("../../assets/icons/pointerMIckey.png"), pointer;
+/*::-webkit-scrollbar {*/
+    /*cursor: url("../../assets/icons/pointerMIckey.png"), pointer;*/
 
-}
+/*}*/

@@ -54,7 +54,7 @@ export default [
     title: "Radca Tomczak",
     services: "Branding, website",
     src: img7,
-    imgPath: "/agencja-interaktywna-realizacje/kancelaria-tomczak",
+    imgPath: "/agencja-interaktywna-realizacje/radca-prawny-tomczak",
     alt: "Kancelaria Tomczak"
   },
 

@@ -1,0 +1,119 @@
+.foooter{
+  margin: 5rem 0 2.5rem 0;
+  padding: 10rem 0 25rem 0;
+  & > div{
+    display: grid;
+    gap: 5rem;
+    grid-template-columns: 2fr 1fr 2fr 2fr;
+  }
+  //display: flex;
+  //justify-content: space-between;
+  //align-items: flex-start;
+  .main-btn:after{
+    border-bottom: 1px solid;
+  }
+  .copy{
+    //opacity: .4;
+    color: var(--clr-grey);
+    margin: 2.5rem 0 0 0;
+    font-size: 12px;
+  }
+  .foooter-logo{
+    animation: squiggly-anim 0.25s steps(2) infinite;
+    display: inline-block;
+  }
+  .main-btn{
+    width: 90%;
+    margin-top: 2.5rem;
+    padding-bottom: .25rem;
+    img{
+      width: 20px !important;
+    }
+     a > h5{
+      font-size: 18px !important;
+      color: var(--clr-grey) !important;
+      font-family: var(--ff-secondary);
+    }
+  }
+  p, ul li a{
+    font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (1900 - 320)));
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-family: var(--ff-secondary-medium);
+    text-align: left;
+  }
+  ul{
+    padding: 0;
+  }
+  ul li{
+    padding: .25rem 0;
+  }
+  .social-links-wrapper{
+    ul{
+      margin-top: 2rem;
+      padding: 0;
+      display: flex;
+      //justify-content: space-between;
+      gap: 1rem;
+    }
+    li img{
+      width: 45px;
+      height: auto;
+      //opacity: .8;
+      filter: invert(57%) sepia(0%) saturate(25%) hue-rotate(137deg) brightness(99%) contrast(93%);
+      //transition:  .15s ease-in-out;
+
+      //filter: invert(97%) sepia(66%) saturate(1013%) hue-rotate(16deg) brightness(102%) contrast(98%);
+      //filter: invert(53%) sepia(24%) saturate(1412%) hue-rotate(231deg) brightness(81%) contrast(92%);
+      &:hover{
+        filter: invert(97%) sepia(66%) saturate(1013%) hue-rotate(16deg) brightness(102%) contrast(98%);
+      }
+    }
+  }
+  //
+  //background-image: url("../assets/imgs/static-dither.png");
+  //backdrop-filter:  invert(97%) sepia(66%) saturate(1013%) hue-rotate(16deg) brightness(102%) contrast(98%);;
+  //background-repeat: repeat-x;
+  //background-position: bottom;
+
+}
+#single-project-page{
+  .foooter{
+    .foooter-logo{
+      img{
+        filter:  brightness(0) invert(0);
+      }
+    }
+    .subscribe-wrapper{
+      .main-btn {
+       //a h5{
+       //   color: var(--clr-black);
+       // }
+        img{
+          width: 20px !important;
+          filter: invert(57%) sepia(0%) saturate(25%) hue-rotate(137deg) brightness(99%) contrast(93%);
+        }
+      }
+    }
+  }
+
+  //TEMPORARY
+  .subsec-header{
+    display: none;
+  }
+  .main-btn:after{
+    border-bottom: 1px solid;
+  }
+  .main-btn {
+    padding-bottom: .25rem;
+
+    h5{
+      font-size: 18px;
+      //color: var(--clr-grey);
+     }
+    img{
+      width: 20px;
+      filter: invert(57%) sepia(0%) saturate(25%) hue-rotate(137deg) brightness(99%) contrast(93%);
+    }
+  }
+}

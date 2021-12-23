@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-// import "../css/main.css"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 // import Footer from "./Footer"
@@ -10,7 +9,7 @@ import starTransition from "../assets/icons/clover.svg"
 // import ProjectsSubsection from "./ProjectsSubsection"
 // import { Curtains } from "react-curtains";
 // import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
-import ChatBot from 'react-simple-chatbot';
+// import ChatBot from 'react-simple-chatbot';
 import TriggerText from "../components/TriggerText"
 
 import memojiBot from "../assets/imgs/emoji.png"
@@ -34,27 +33,6 @@ const Layout = ({ children, location }) => {
       <Navbar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
 
-      {/*<Scroll callbacks={location}  />*/}
-
-      {/*<AnimatePresence  >*/}
-      {/*  <motion.img*/}
-      {/*    location={location}*/}
-      {/*    key={location.key}*/}
-      {/*    initial="enter"*/}
-      {/*    animate="enter"*/}
-      {/*    exit="hidden"*/}
-      {/*    variants={{*/}
-      {/*      enter: {  scale: .001, display: 'none',*/}
-      {/*        transition: {  duration: 1.0, ease: [.17,.67,.83,.67]}*/}
-      {/*      },*/}
-      {/*      hidden: {  display: "block" ,  scale: 20,  transformOrigin: "center",*/}
-      {/*        transition: { delay:  .4 , duration: .9, ease: [.17,.67,.83,.67]}*/}
-      {/*      }*/}
-      {/*    }}*/}
-      {/*    data-scroll data-scroll-sticky*/}
-      {/*    className="star-transition" src={starTransition} width="1220" alt=""/>*/}
-      {/*</AnimatePresence>*/}
-
 
       <AnimatePresence initial={true} exitBeforeEnter className="pages-wrapper">
         <motion.div
@@ -65,6 +43,38 @@ const Layout = ({ children, location }) => {
           animate="enter"
           exit="exit"
           transition={transition}
+          // exit="hidden"
+          // variants={{
+          //   initial: {
+          //     opacity: 0,
+          //     filter: 'blur(15px)',
+          //     // transform: 'translate3d(0vw, 1.5vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg)',
+          //     // transformStyle: 'preserve-3d',
+          //   },
+          //   enter: {
+          //     opacity: 1,
+          //     filter: 'blur(0px)',
+          //     // transform: 'translate3d(0vw, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg)',
+          //     // transformStyle: 'preserve-3d',
+          //     transition: {
+          //       duration: 1.4,
+          //       delay: .6,
+          //       // when: "beforeChildren",
+          //       ease: [0.6, 0.01, -0.05, 0.9]
+          //     }
+          //   },
+          //   exit: {
+          //     opacity: 0,
+          //     filter: 'blur(5px)',
+          //     // transform: 'translate3d(0vw, 1.5vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg)',
+          //     // transformStyle: 'preserve-3d',
+          //     transition: {
+          //       delay: .6,
+          //       duration: .4,
+          //       ease: [0.6, 0.01, -0.05, 0.9]
+          //     }
+          //   }
+          // }}
         >
           {children}
         </motion.div>
@@ -73,29 +83,29 @@ const Layout = ({ children, location }) => {
         {/*<TriggerText threshold=".5" delay="4">*/}
           <div className="chat-bot-wrapper">
 
-            <ChatBot
-              style={{ display: isShown ? 'block' : 'none' }}
-              botAvatar={memojiBot}
-              userAvatar={memojiUser}
-              placeholder="Napisz wiadomość"
-              steps={[
-                {
-                  id: '1',
-                  message: 'Cześć, zapoznajmy się. Jestem Mateusz, a Ty?',
-                  trigger: '2',
-                },
-                {
-                  id: '2',
-                  user: true,
-                  trigger: '3',
-                },
-                {
-                  id: '3',
-                  message: 'Cześć {previousValue}, miło Cię poznać!',
-                  end: true,
-                },
-              ]}
-            />
+            {/*<ChatBot*/}
+            {/*  style={{ display: isShown ? 'block' : 'none' }}*/}
+            {/*  botAvatar={memojiBot}*/}
+            {/*  userAvatar={memojiUser}*/}
+            {/*  placeholder="Napisz wiadomość"*/}
+            {/*  steps={[*/}
+            {/*    {*/}
+            {/*      id: '1',*/}
+            {/*      message: 'Cześć, zapoznajmy się. Jestem Mateusz, a Ty?',*/}
+            {/*      trigger: '2',*/}
+            {/*    },*/}
+            {/*    {*/}
+            {/*      id: '2',*/}
+            {/*      user: true,*/}
+            {/*      trigger: '3',*/}
+            {/*    },*/}
+            {/*    {*/}
+            {/*      id: '3',*/}
+            {/*      message: 'Cześć {previousValue}, miło Cię poznać!',*/}
+            {/*      end: true,*/}
+            {/*    },*/}
+            {/*  ]}*/}
+            {/*/>*/}
 
             <img src={memoji} alt="Lumina" className="emoji" width={140} onClick={() => setIsShown(!isShown)} />
           </div>

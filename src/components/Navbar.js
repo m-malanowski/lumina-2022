@@ -16,7 +16,7 @@ const Navbar = ({ toggleSideBar, isOpen }) => {
 
         <TriggerText threshold=".5" delay="4">
           <a href="/" className={`navbar-logo ${isOpen? "closed" : "open"}`}>
-            <img src={logo} width={250} alt="Lumina Studio - Agencja Interaktywna" />
+            <img src={logo} width={150} alt="Lumina Studio - Agencja Interaktywna" />
           </a>
         </TriggerText>
         {/*<h3>*/}
@@ -39,7 +39,7 @@ const Navbar = ({ toggleSideBar, isOpen }) => {
       <div className="navbar-right">
         <TriggerText threshold=".5" delay="4">
           <div className={`${isOpen? "closed" : "open"}`}>
-            <Link to="/kontakt" className="cta-btn" > Zacznij projekt </Link>
+            <Link to="/kontakt" className="cta-btn" > Rozpocznij projekt </Link>
             {/*<a href="/kontakt" className="cta-btn">Zacznij projekt</a>*/}
           </div>
         </TriggerText>

@@ -13,6 +13,7 @@ import serviceStickersSmall from "../assets/icons/serviceStickersSmall.svg"
 // import aboutServiceStar2 from "../assets/icons/aboutServiceStar2.svg"
 import SEO from "../components/SEO"
 import smallStar from "../assets/icons/smallStar.svg"
+import AboutSectionAccordion from "../components/AboutSectionAccordion"
 
 import serviceOrbit1 from "../assets/icons/serviceOrbit1.svg"
 import serviceOrbit2 from "../assets/icons/serviceOrbit2.svg"
@@ -22,6 +23,9 @@ import serviceOrbit5 from "../assets/icons/serviceOrbit5.svg"
 import serviceOrbit6 from "../assets/icons/serviceOrbit6.svg"
 import handDown from "../assets/icons/handDown.svg"
 import arrow from "../assets/icons/right-arrow.svg"
+import ArticlesSlider from "../components/ArticlesSlider"
+import ContactSubsec from "../components/ContactSubsec"
+import Foooter from "../components/Foooter"
 
 
 // ...GatsbyImageSharpFluid
@@ -101,276 +105,395 @@ const Uslugi = () => {
         {/*    className="service-stickers" width="100%" src={serviceStickers} alt="" />*/}
         {/*</TriggerImg>*/}
 
-        <TriggerText threshold=".5" delay="1">
+        {/*<TriggerText threshold=".5" delay="1">*/}
           <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
                           secondTapeScroll={false}  fourthTapeScroll={false}
                           thirdTapeScroll={false}
                           subSectionMarqueeTitle={true}
                           title="Usługi"
                           dataScrollPosition="bottom" dataScrollSpeed="2" />
-        </TriggerText>
+        {/*</TriggerText>*/}
 
 
-        <TriggerImg threshold="1" delay={1.5}>
+        {/*<TriggerImg threshold="1" delay={2}>*/}
           <img className="service-stickers" width="100%" src={serviceStickers} alt="Lumina Studio Usługi" />
           <img className="service-stickers-small " width="100%" src={serviceStickersSmall} alt="Lumina Studio Usługi" />
-        </TriggerImg>
-
-        {/*<section className="about cta-section">*/}
-        {/*  <h2>Let's partner up!</h2>*/}
-        {/*  <p>Send us an email with a brief description of your <br/> company and*/}
-        {/*    suggestions on our future cooperation </p>*/}
-
-        {/*  <div className="stars-wrapper">*/}
-        {/*    <div className="star star-one"></div>*/}
-        {/*    <div className="star star-two"></div>*/}
-        {/*    <div className="star star-three"></div>*/}
-        {/*  </div>*/}
-        {/*</section>*/}
-
-
-        <section className="about-page-process">
-          <div className="subsec-header">
-            <TriggerText threshold=".5" delay=".45">
-              <h2 className="subsec-title">Nasze Usługi</h2>
-            </TriggerText>
-            <TriggerText threshold=".5" delay=".35">
-              <h5 className="">01</h5>
-            </TriggerText>
-          </div>
-
-          <div className="about-page-services">
-            <div className="about-single">
-
-              <TriggerLine threshold=".5" delay=".2">
-                <hr className="animated" />
-              </TriggerLine>
-
-              <div className="about-single-left">
-                {/*<TriggerImg threshold="0" delay={1.2}>*/}
-                {/*  <img className="small-star" width="150" src={serviceOrbit1} alt="" />*/}
-                {/*</TriggerImg>*/}
-                <span>I</span>
-
-              </div>
-              <div className="about-single-right">
-                <div>
-                  {/*<TriggerText threshold=".5" delay=".35">*/}
-                    {/*<span>01.</span>*/}
-                  {/*</TriggerText>*/}
-                  <TriggerText threshold=".5" delay=".55">
-                    <h3>Web dev</h3>
-                    {/*<div className="eloelo background-color"></div>*/}
-                  </TriggerText>
-                </div>
-                <TriggerText threshold=".5" delay=".55">
-                  <p>W naszej agencji interaktywnej świadczymy kompleksowe usługi z zakresu projektowania responsywnych stron internetowych.
-                    Wszystkie strony www wyposażamy w dedykowany system CMS do samodzielnego zarządzania treścią.</p>
-                </TriggerText>
-              </div>
-            </div>
-
-            <div className="about-single">
-
-              <TriggerLine threshold=".5" delay=".2">
-                <hr className="animated" />
-              </TriggerLine>
-
-              <div className="about-single-left">
-                {/*<TriggerImg threshold="0" delay={1.2}>*/}
-                {/*  <img className="small-star" width="150" src={serviceOrbit2} alt="" />*/}
-                {/*</TriggerImg>*/}
-                <span>II</span>
-              </div>
-              <div className="about-single-right">
-                <div>
-                  {/*<TriggerText threshold=".5" delay=".35">*/}
-                  {/*  <span>02.</span>*/}
-                  {/*</TriggerText>*/}
-                  <TriggerText threshold=".5" delay=".55">
-                    <h3>Branding</h3>
-                  </TriggerText>
-                  {/*<img className="rotating-star" src={smallStar} alt="Lumina Studio" />*/}
-
-                </div>
-                <TriggerText threshold=".5" delay=".55">
-                  <p>Projektujemy logotypy, wizytówki oraz papier firmowy. Dbamy o to by wszystkie elementy identyfikacji wizualnej były spójne ze sobą jak
-                    również odzwierciedlały branżę lub sprzedawany produkt.</p>
-                </TriggerText>
-              </div>
-            </div>
-
-            <div className="about-single">
-
-              <TriggerLine threshold=".5" delay=".2">
-                <hr className="animated" />
-              </TriggerLine>
-
-              <div className="about-single-left">
-                {/*<TriggerImg threshold="0" delay={1.2}>*/}
-                {/*  <img className="small-star" width="150" src={serviceOrbit3} alt="" />*/}
-                {/*</TriggerImg>*/}
-                <span>III</span>
-              </div>
-              <div className="about-single-right">
-                <div>
-                  {/*<TriggerText threshold=".5" delay=".35">*/}
-                  {/*  <span>03.</span>*/}
-                  {/*</TriggerText>*/}
-
-                  <TriggerText threshold=".5" delay=".55">
-                    <h3>Social media</h3>
-                  </TriggerText>
-                  {/*<img className="rotating-star" src={smallStar} alt="Lumina Studio" />*/}
-
-                </div>
-                <TriggerText threshold=".5" delay=".55">
-                  <p>Mając stronę lub sklep internetowy warto pomyśleć o skutecznej reklamie. Idealnym rozwiązaniem są kampanie Google Ads,
-                    Facebook oraz pozycjonowanie stron internetowych.</p>
-                </TriggerText>
-              </div>
-            </div>
-
-            <div className="about-single">
-
-              <TriggerLine threshold=".5" delay=".2">
-                <hr className="animated" />
-              </TriggerLine>
-
-              <div className="about-single-left">
-                {/*<TriggerImg threshold="0" delay={1.2}>*/}
-                {/*  <img className="small-star" width="150" src={serviceOrbit4} alt="" />*/}
-                {/*</TriggerImg>*/}
-                <span>IV</span>
-
-              </div>
-              <div className="about-single-right">
-                <div>
-                  {/*<TriggerText threshold=".5" delay=".35">*/}
-                  {/*  <span>04.</span>*/}
-                  {/*  <div className="eloelo background-color"></div>*/}
-                  {/*</TriggerText>*/}
-                  {/*<span>04.</span>*/}
-
-                  <TriggerText threshold=".5" delay=".55">
-                    <h3>SEO</h3>
-                  </TriggerText>
-                </div>
-                <TriggerText threshold=".5" delay=".55">
-                  <p>Pok pok live-edge biodiesel gluten-free, godard knausgaard craft beer wolf succulents chia venmo
-                    edison bulb cornhole. Woke hashtag actually cloud bread listicle letterpress. Dreamcatcher celiac
-                    stumptown narwhal tilde. Flannel four dollar toast bitters intelligentsia pop-up copper mug venmo
-                    kickstarter XOXO. Skateboard kombucha waistcoat. </p>
-                </TriggerText>
-              </div>
-            </div>
-
-            <div className="about-single">
-
-              <TriggerLine threshold=".5" delay=".2">
-                <hr className="animated" />
-              </TriggerLine>
-
-              <div className="about-single-left">
-                {/*<TriggerImg threshold="0" delay={1.2}>*/}
-                {/*  <img className="small-star" width="150" src={serviceOrbit5} alt="" />*/}
-                {/*</TriggerImg>*/}
-                <span>V</span>
-
-              </div>
-              <div className="about-single-right">
-                <div>
-                  {/*<TriggerText threshold=".5" delay=".35">*/}
-                    {/*<span>05.</span>*/}
-                    {/*<div className="eloelo background-color"></div>*/}
-                  {/*</TriggerText>*/}
-                  <TriggerText threshold=".5" delay=".55">
-                    <h3>Digital</h3>
-                  </TriggerText>
-                </div>
-                <TriggerText threshold=".5" delay=".55">
-                  <p>Pok pok live-edge biodiesel gluten-free, godard knausgaard craft beer wolf succulents chia venmo
-                    edison bulb cornhole. Woke hashtag actually cloud bread listicle letterpress. Dreamcatcher celiac
-                    stumptown narwhal tilde. Flannel four dollar toast bitters intelligentsia pop-up copper mug venmo
-                    kickstarter XOXO. Skateboard kombucha waistcoat. </p>
-                </TriggerText>
-              </div>
-            </div>
-
-            <div className="about-single">
-
-              <TriggerLine threshold=".5" delay=".2">
-                <hr className="animated" />
-              </TriggerLine>
-
-              <div className="about-single-left">
-                {/*<TriggerImg threshold="0" delay={1.2}>*/}
-                {/*  <img className="small-star" width="150" src={serviceOrbit6} alt="" />*/}
-                {/*</TriggerImg>*/}
-                <span>VI</span>
-
-              </div>
-              <div className="about-single-right">
-                <div>
-                  {/*<TriggerText threshold=".5" delay=".35">*/}
-                  {/*  <span>06.</span>*/}
-                  {/*</TriggerText>*/}
-                  <TriggerText threshold=".5" delay=".55">
-                    <h3>Design</h3>
-                  </TriggerText>
-                  {/*<img className="rotating-star" src={smallStar} alt="Lumina Studio" />*/}
-
-                </div>
-                <TriggerText threshold=".5" delay=".55">
-                  <p>Pok pok live-edge biodiesel gluten-free, godard knausgaard craft beer wolf succulents chia venmo
-                    edison bulb cornhole. Woke hashtag actually cloud bread listicle letterpress. Dreamcatcher celiac
-                    stumptown narwhal tilde. Flannel four dollar toast bitters intelligentsia pop-up copper mug venmo
-                    kickstarter XOXO. Skateboard kombucha waistcoat. </p>
-                </TriggerText>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/*<TriggerImg threshold="0" delay={1}>*/}
-        {/*  <img className="service-stickers" width="100%" src={serviceStickers} alt="" />*/}
-
-        {/*  <img className="service-stickers-small " width="100%" src={serviceStickersSmall} alt="" />*/}
         {/*</TriggerImg>*/}
 
 
-        <section className="cta-section">
+        <section className="about-page-process">
 
-          <h2>Let's partner up!</h2>
-          <p>Send us an email with a brief description of your <br/> company and
-            suggestions on our future cooperation </p>
+          {/*<div className="new-subsec-body">*/}
+          {/*  <div className="subsec-span-wprapper">*/}
 
-          <div className="service-title">
-            <h5>Dowiedz się więcej</h5>
-            <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-          </div>
+          {/*    <TriggerImg>*/}
+          {/*      <div className="star"></div>*/}
+          {/*    </TriggerImg>*/}
 
-          <div className="stars-wrapper">
-            <div className="star star-one"></div>
-            <div className="star star-two"></div>
-            <div className="star star-three"></div>
-          </div>
+          {/*    <TriggerText threshold=".5" delay=".5">*/}
+          {/*      <span className="subsec-span">Why we do what we do</span>*/}
+          {/*    </TriggerText>*/}
+          {/*  </div>*/}
+          {/*  <TriggerText threshold=".5" delay=".5">*/}
+          {/*    <p>*/}
+          {/*      Brooklyn man bun intelli gentsia aes marfa VHS bi selfies lorem sha man, megg ings godard slow-carb flannel. Ramps*/}
+          {/*      church-key umami dreamca tcher jean chips next level broo klyn marfa VHS bitters scen. Pezo Pezo właśnie tak <em> palo*/}
+          {/*      before they sold out.</em>*/}
+          {/*    </p>*/}
+          {/*  </TriggerText>*/}
+
+          {/*</div>*/}
+
+          <AboutSectionAccordion/>
+
+
+
+          {/*<div className="new-services">*/}
+          {/*  <div>*/}
+          {/*    <span>01</span>*/}
+          {/*    <h2>Web dev</h2>*/}
+          {/*    <img src={arrow} alt="" width="80px" className="ml-2 align-self-start" />*/}
+          {/*  </div>*/}
+
+          {/*  <div>*/}
+          {/*    <span>02</span>*/}
+          {/*    <h2>Design</h2>*/}
+          {/*    <img src={arrow} alt="" width="80px" className="ml-2 align-self-start" />*/}
+          {/*  </div>*/}
+
+          {/*  <div>*/}
+          {/*    <span>03</span>*/}
+          {/*    <h2>Digital</h2>*/}
+          {/*    <img src={arrow} alt="" width="80px" className="ml-2 align-self-start" />*/}
+          {/*  </div>*/}
+
+          {/*  <div>*/}
+          {/*    <span>04</span>*/}
+          {/*    <h2>SEO</h2>*/}
+          {/*    <img src={arrow} alt="" width="80px" className="ml-2 align-self-start" />*/}
+          {/*  </div>*/}
+
+          {/*  <div>*/}
+          {/*    <span>05</span>*/}
+          {/*    <h2>Design</h2>*/}
+          {/*    <img src={arrow} alt="" width="80px" className="ml-2 align-self-start" />*/}
+          {/*  </div>*/}
+
+
+          {/*  <div>*/}
+          {/*    <span>062</span>*/}
+          {/*    <h2>Design</h2>*/}
+          {/*    <img src={arrow} alt="" width="80px" className="ml-2 align-self-start" />*/}
+          {/*  </div>*/}
+
+          {/*</div>*/}
+
+
+
+          {/*<div className="subsec-header">*/}
+          {/*  <TriggerText threshold=".5" delay=".45">*/}
+          {/*    <h2 className="subsec-title">Nasze Usługi</h2>*/}
+          {/*  </TriggerText>*/}
+          {/*  <TriggerText threshold=".5" delay=".35">*/}
+          {/*    <h5 className="">01</h5>*/}
+          {/*  </TriggerText>*/}
+          {/*</div>*/}
+
+
+          {/*<div className="main-about-services">*/}
+          {/*  <div className="single-service">*/}
+          {/*    <TriggerLine threshold=".5" delay=".5">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <TriggerText threshold=".5" delay="1.0">*/}
+          {/*      <h3>Proces I</h3>*/}
+          {/*    </TriggerText>*/}
+          {/*    <TriggerText threshold=".5" delay="1.2">*/}
+          {/*      <p>*/}
+          {/*        Projektujemy logotypy, wizytówki oraz papier firmowy. Dbamy o to by wszystkie*/}
+          {/*        elementy identyfikacji wizualnej były spójne ze sobą jak również odzwierciedlały branżę lub*/}
+          {/*        sprzedawany produkt.*/}
+          {/*      </p>*/}
+          {/*    </TriggerText>*/}
+          {/*  </div>*/}
+          {/*  <div className="single-service">*/}
+          {/*    <TriggerLine threshold=".5" delay=".5">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+          {/*    <TriggerText threshold=".5" delay="1.0">*/}
+          {/*      <h3>Proces II</h3>*/}
+          {/*    </TriggerText>*/}
+          {/*    <TriggerText threshold=".5" delay="1.2">*/}
+          {/*      <p>*/}
+          {/*        W naszej agencji interaktywnej świadczymy kompleksowe usługi z zakresu projektowania*/}
+          {/*        responsywnych stron internetowych.*/}
+          {/*        Realizujemy projekty dla klientów korporacyjnych oraz małych firm.*/}
+          {/*        Wszystkie strony www wyposażamy w dedykowany system CMS do samodzielnego zarządzania*/}
+          {/*        treścią.*/}
+          {/*      </p>*/}
+          {/*    </TriggerText>*/}
+          {/*  </div>*/}
+          {/*  <div className="single-service">*/}
+          {/*    <TriggerLine threshold=".5" delay=".5">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+          {/*    <TriggerText threshold=".5" delay="1.0">*/}
+          {/*      <h3>Proces III</h3>*/}
+          {/*    </TriggerText>*/}
+          {/*    <TriggerText threshold=".5" delay="1.2">*/}
+          {/*      <p>*/}
+          {/*        Zajmujemy się tworzeniem profesjonalnych sklepów internetowych, dopracowanych pod względem*/}
+          {/*        mechanizmów sprzedażowych. Tworzone przez nas sklepy internetowe oparte są wyłącznie o*/}
+          {/*        sprawdze, a przy tym niezawodne, rozwiązania e-commerce.*/}
+          {/*      </p>*/}
+          {/*    </TriggerText>*/}
+          {/*  </div>*/}
+          {/*  <div className="single-service">*/}
+          {/*    <TriggerLine threshold=".5" delay=".5">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+          {/*    <TriggerText threshold=".5" delay="1.0">*/}
+          {/*      <h3>Proces IV</h3>*/}
+          {/*    </TriggerText>*/}
+          {/*    <TriggerText threshold=".5" delay="1.2">*/}
+          {/*      <p>*/}
+          {/*        Mając stronę lub sklep internetowy warto pomyśleć o skutecznej reklamie.*/}
+          {/*        Idealnym rozwiązaniem są kampanie Google Ads, Facebook oraz pozycjonowanie stron*/}
+          {/*        internetowych.*/}
+          {/*      </p>*/}
+          {/*    </TriggerText>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
+
+
+          {/*<div className="about-page-services">*/}
+          {/*  <div className="about-single">*/}
+
+          {/*    <TriggerLine threshold=".5" delay=".2">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <div className="about-single-left">*/}
+          {/*      /!*<TriggerImg threshold="0" delay={1.2}>*!/*/}
+          {/*      /!*  <img className="small-star" width="150" src={serviceOrbit1} alt="" />*!/*/}
+          {/*      /!*</TriggerImg>*!/*/}
+          {/*      <span>I</span>*/}
+
+          {/*    </div>*/}
+          {/*    <div className="about-single-right">*/}
+          {/*      <div>*/}
+          {/*        /!*<TriggerText threshold=".5" delay=".35">*!/*/}
+          {/*          /!*<span>01.</span>*!/*/}
+          {/*        /!*</TriggerText>*!/*/}
+          {/*        <TriggerText threshold=".5" delay=".55">*/}
+          {/*          <h3>Web dev</h3>*/}
+          {/*          /!*<div className="eloelo background-color"></div>*!/*/}
+          {/*        </TriggerText>*/}
+          {/*      </div>*/}
+          {/*      <TriggerText threshold=".5" delay=".55">*/}
+          {/*        <p>W naszej agencji interaktywnej świadczymy kompleksowe usługi z zakresu projektowania responsywnych stron internetowych.*/}
+          {/*          Wszystkie strony www wyposażamy w dedykowany system CMS do samodzielnego zarządzania treścią.</p>*/}
+          {/*      </TriggerText>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+
+          {/*  <div className="about-single">*/}
+
+          {/*    <TriggerLine threshold=".5" delay=".2">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <div className="about-single-left">*/}
+          {/*      /!*<TriggerImg threshold="0" delay={1.2}>*!/*/}
+          {/*      /!*  <img className="small-star" width="150" src={serviceOrbit2} alt="" />*!/*/}
+          {/*      /!*</TriggerImg>*!/*/}
+          {/*      <span>II</span>*/}
+          {/*    </div>*/}
+          {/*    <div className="about-single-right">*/}
+          {/*      <div>*/}
+          {/*        /!*<TriggerText threshold=".5" delay=".35">*!/*/}
+          {/*        /!*  <span>02.</span>*!/*/}
+          {/*        /!*</TriggerText>*!/*/}
+          {/*        <TriggerText threshold=".5" delay=".55">*/}
+          {/*          <h3>Branding</h3>*/}
+          {/*        </TriggerText>*/}
+          {/*        /!*<img className="rotating-star" src={smallStar} alt="Lumina Studio" />*!/*/}
+
+          {/*      </div>*/}
+          {/*      <TriggerText threshold=".5" delay=".55">*/}
+          {/*        <p>Projektujemy logotypy, wizytówki oraz papier firmowy. Dbamy o to by wszystkie elementy identyfikacji wizualnej były spójne ze sobą jak*/}
+          {/*          również odzwierciedlały branżę lub sprzedawany produkt.</p>*/}
+          {/*      </TriggerText>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+
+          {/*  <div className="about-single">*/}
+
+          {/*    <TriggerLine threshold=".5" delay=".2">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <div className="about-single-left">*/}
+          {/*      /!*<TriggerImg threshold="0" delay={1.2}>*!/*/}
+          {/*      /!*  <img className="small-star" width="150" src={serviceOrbit3} alt="" />*!/*/}
+          {/*      /!*</TriggerImg>*!/*/}
+          {/*      <span>III</span>*/}
+          {/*    </div>*/}
+          {/*    <div className="about-single-right">*/}
+          {/*      <div>*/}
+          {/*        /!*<TriggerText threshold=".5" delay=".35">*!/*/}
+          {/*        /!*  <span>03.</span>*!/*/}
+          {/*        /!*</TriggerText>*!/*/}
+
+          {/*        <TriggerText threshold=".5" delay=".55">*/}
+          {/*          <h3>Social media</h3>*/}
+          {/*        </TriggerText>*/}
+          {/*        /!*<img className="rotating-star" src={smallStar} alt="Lumina Studio" />*!/*/}
+
+          {/*      </div>*/}
+          {/*      <TriggerText threshold=".5" delay=".55">*/}
+          {/*        <p>Mając stronę lub sklep internetowy warto pomyśleć o skutecznej reklamie. Idealnym rozwiązaniem są kampanie Google Ads,*/}
+          {/*          Facebook oraz pozycjonowanie stron internetowych.</p>*/}
+          {/*      </TriggerText>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+
+          {/*  <div className="about-single">*/}
+
+          {/*    <TriggerLine threshold=".5" delay=".2">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <div className="about-single-left">*/}
+          {/*      /!*<TriggerImg threshold="0" delay={1.2}>*!/*/}
+          {/*      /!*  <img className="small-star" width="150" src={serviceOrbit4} alt="" />*!/*/}
+          {/*      /!*</TriggerImg>*!/*/}
+          {/*      <span>IV</span>*/}
+
+          {/*    </div>*/}
+          {/*    <div className="about-single-right">*/}
+          {/*      <div>*/}
+          {/*        /!*<TriggerText threshold=".5" delay=".35">*!/*/}
+          {/*        /!*  <span>04.</span>*!/*/}
+          {/*        /!*  <div className="eloelo background-color"></div>*!/*/}
+          {/*        /!*</TriggerText>*!/*/}
+          {/*        /!*<span>04.</span>*!/*/}
+
+          {/*        <TriggerText threshold=".5" delay=".55">*/}
+          {/*          <h3>SEO</h3>*/}
+          {/*        </TriggerText>*/}
+          {/*      </div>*/}
+          {/*      <TriggerText threshold=".5" delay=".55">*/}
+          {/*        <p>Pok pok live-edge biodiesel gluten-free, godard knausgaard craft beer wolf succulents chia venmo*/}
+          {/*          edison bulb cornhole. Woke hashtag actually cloud bread listicle letterpress. Dreamcatcher celiac*/}
+          {/*          stumptown narwhal tilde. Flannel four dollar toast bitters intelligentsia pop-up copper mug venmo*/}
+          {/*          kickstarter XOXO. Skateboard kombucha waistcoat. </p>*/}
+          {/*      </TriggerText>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+
+          {/*  <div className="about-single">*/}
+
+          {/*    <TriggerLine threshold=".5" delay=".2">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <div className="about-single-left">*/}
+          {/*      /!*<TriggerImg threshold="0" delay={1.2}>*!/*/}
+          {/*      /!*  <img className="small-star" width="150" src={serviceOrbit5} alt="" />*!/*/}
+          {/*      /!*</TriggerImg>*!/*/}
+          {/*      <span>V</span>*/}
+
+          {/*    </div>*/}
+          {/*    <div className="about-single-right">*/}
+          {/*      <div>*/}
+          {/*        /!*<TriggerText threshold=".5" delay=".35">*!/*/}
+          {/*          /!*<span>05.</span>*!/*/}
+          {/*          /!*<div className="eloelo background-color"></div>*!/*/}
+          {/*        /!*</TriggerText>*!/*/}
+          {/*        <TriggerText threshold=".5" delay=".55">*/}
+          {/*          <h3>Digital</h3>*/}
+          {/*        </TriggerText>*/}
+          {/*      </div>*/}
+          {/*      <TriggerText threshold=".5" delay=".55">*/}
+          {/*        <p>         Zajmujemy się tworzeniem profesjonalnych sklepów internetowych, dopracowanych pod względem*/}
+          {/*          mechanizmów sprzedażowych. Tworzone przez nas sklepy internetowe oparte są wyłącznie o*/}
+          {/*          sprawdze, a przy tym niezawodne, rozwiązania e-commerce.</p>*/}
+          {/*      </TriggerText>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+
+          {/*  <div className="about-single">*/}
+
+          {/*    <TriggerLine threshold=".5" delay=".2">*/}
+          {/*      <hr className="animated" />*/}
+          {/*    </TriggerLine>*/}
+
+          {/*    <div className="about-single-left">*/}
+          {/*      /!*<TriggerImg threshold="0" delay={1.2}>*!/*/}
+          {/*      /!*  <img className="small-star" width="150" src={serviceOrbit6} alt="" />*!/*/}
+          {/*      /!*</TriggerImg>*!/*/}
+          {/*      <span>VI</span>*/}
+
+          {/*    </div>*/}
+          {/*    <div className="about-single-right">*/}
+          {/*      <div>*/}
+          {/*        /!*<TriggerText threshold=".5" delay=".35">*!/*/}
+          {/*        /!*  <span>06.</span>*!/*/}
+          {/*        /!*</TriggerText>*!/*/}
+          {/*        <TriggerText threshold=".5" delay=".55">*/}
+          {/*          <h3>Design</h3>*/}
+          {/*        </TriggerText>*/}
+          {/*        /!*<img className="rotating-star" src={smallStar} alt="Lumina Studio" />*!/*/}
+
+          {/*      </div>*/}
+          {/*      <TriggerText threshold=".5" delay=".55">*/}
+          {/*        <p>Pok pok live-edge biodiesel gluten-free, godard knausgaard craft beer wolf succulents chia venmo*/}
+          {/*          edison bulb cornhole. Woke hashtag actually cloud bread listicle letterpress. Dreamcatcher celiac*/}
+          {/*          stumptown narwhal tilde. Flannel four dollar toast bitters intelligentsia pop-up copper mug venmo*/}
+          {/*          kickstarter XOXO. Skateboard kombucha waistcoat. </p>*/}
+          {/*      </TriggerText>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
 
         </section>
 
+        <Worldwide />
 
-        {/*<SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true} secondTapeScroll={true}*/}
-        {/*                thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2"/>*/}
+        <section className="index-process">
+          <div className="subsec-header">
+            <TriggerText threshold=".25" delay=".25">
+              <h2 className="subsec-title">Artykuły</h2>
+              <br />
+              <p>Zapoznaj się z artykułami</p>
+            </TriggerText>
+            <TriggerText threshold=".25" delay=".25">
+              <span className="">03.</span>
+            </TriggerText>
+          </div>
 
-        <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
-                        secondTapeScroll={true}  fourthTapeScroll={true}
+          <section className="services-page-slider break-out">
+            <TriggerText threshold=".25" delay=".3">
+              <ArticlesSlider />
+            </TriggerText>
+          </section>
+        </section>
+
+
+        {/*<AboutSectionAccordion/>*/}
+
+
+        <ContactSubsec />
+
+        <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
+                        secondTapeScroll={true}  fourthTapeScroll={false}
                         thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2"
         />
 
-
-        {/*<Worldwide/>*/}
-
-        <LowerFooter/>
+        <Foooter/>
+        {/*<LowerFooter/>*/}
 
       </main>
       </LocomotiveScrollProvider>

@@ -27,21 +27,21 @@ const Worldwide = () => {
       {/*</TriggerImg>*/}
 
       <div className="worldwide-container">
-        <TriggerImg delay={.15}>
+        {/*<TriggerImg delay={.15}>*/}
           <img
             className="worldwide-star " width="500" src={star} alt="Agencja interaktywna lumina studio"
           />
-        </TriggerImg>
+        {/*</TriggerImg>*/}
 
 
-        <TriggerText threshold=".2" delay=".5">
-          <h2 className=" w-100">Lumina - Studio</h2>
+        <TriggerText threshold=".2" delay=".35">
+          <h2 className=" w-100">Lumina Std</h2>
         </TriggerText>
-        <TriggerText threshold=".2" delay=".5">
+        <TriggerText threshold=".2" delay=".45">
           <h3>worldwide</h3>
         </TriggerText>
 
-        <TriggerImg delay={1} threshold={0}>
+        <TriggerImg delay={.5} threshold={0}>
           <img
             data-scroll
             // data-scroll-speed="2"

@@ -25,11 +25,22 @@ const TriggerText = ({children, threshold, delay, cName}) => {
       ref={ref}
       animate={controls}
       initial="hidden"
-      exit="hidden"
+      // exit="hidden"
+      // variants={{
+      //   visible: { opacity: 1, transition: { delay, duration: 1.2}
+      //   },
+      //   hidden: { opacity: 0,  }
+      // }}
       variants={{
-        visible: { opacity: 1, transition: { delay, duration: 1.2}
+        visible: { opacity: 1, y: 0, scaleY: 1.0,    rotate: '0deg', transformStyle: 'preserve-3d',
+          transition: { delay:  delay , duration: 1.2, ease: [.215,.61,.355,1]}
         },
-        hidden: { opacity: 0,  }
+        hidden: { opacity: 0, y: 20,  scaleY: 1.2,  transformOrigin: "top left",  rotate: '1deg',
+          transition: { delay:  .1 , duration: .8, ease: [.215,.61,.355,1]}
+        },
+        // exit: {  opacity: 0, y: 20,  scaleY: 1.2,  transformOrigin: "top left",   rotate: '1deg',
+        //   transition: { delay:  .1 , duration: .8, ease: [.215,.61,.355,1]}
+        // }
       }}
     >
       {children}

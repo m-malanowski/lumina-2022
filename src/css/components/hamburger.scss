@@ -31,7 +31,10 @@
     //height: 100%;
     height: 100vh;
     overflow: hidden;
-    background: var(--clr-black);
+    //background: var(--clr-black);
+    background: var(--clr-white);
+
+
     //background: -webkit-radial-gradient(100% 10%,ellipse cover,#9d49c4 20%,rgba(72,46,151,0) 30%),-webkit-radial-gradient(108% 98%,ellipse cover,rgba(72,46,151,.8) 10%,rgba(72,46,151,0) 30%),-webkit-linear-gradient(bottom right,#c76ac9,#8254c7);
     //background-position-x: 0%, 0%, 0%;
     //background-position-y: 0%, 0%, 0%;
@@ -69,9 +72,8 @@
     cursor: pointer;
     position: relative;
     transition: opacity 0.4s;
-    //color: var(--clr-black);
-
-    color: var(--clr-white);
+    color: var(--clr-black);
+    //color: var(--clr-white);
 
 
     //opacity: 0;
@@ -96,7 +98,7 @@
   .menu__item-link:hover {
     transition-duration: 0.1s;
     opacity: 0 !important;
-    cursor: url("../assets/icons/pointerMIckey.png"), pointer;
+    //cursor: url("../assets/icons/pointerMIckey.png"), pointer;
   }
 
   .menu__item-img {
@@ -110,8 +112,9 @@
     top: 10%;
     transform: scale(0);
     transition: transform .8s  ease-in-out;
+    filter: brightness(0) invert(0);
 
-    filter: invert(90%) sepia(23%) saturate(1963%) hue-rotate(17deg) brightness(108%) contrast(101%);
+    //filter: invert(90%) sepia(23%) saturate(1963%) hue-rotate(17deg) brightness(108%) contrast(101%);
 
 
   }
@@ -190,7 +193,9 @@
 
   .locations {
     padding: 0 7.5vw;
-    color: var(--clr-black);
+    //color: var(--clr-black);
+    //color: var(--clr-white);
+
     margin-top: 4vw;
     font-size: 0.8rem;
     font-weight: 600;
@@ -210,7 +215,9 @@
       }
       li {
         padding-right: 5rem;
-        color: var(--clr-white);
+        //color: var(--clr-white);
+        color: var(--clr-black);
+
         @include for-tablet-landscape-up{
           //padding-right: 0;
           padding: .5rem 0;
@@ -220,7 +227,8 @@
     }
     .blog-link{
       display: flex;
-      color: var(--clr-white);
+      color: var(--clr-black);
+      //color: var(--clr-white);
       img{
         filter: brightness(0) invert(1);
       }
