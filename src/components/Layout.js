@@ -9,7 +9,7 @@ import starTransition from "../assets/icons/clover.svg"
 // import ProjectsSubsection from "./ProjectsSubsection"
 // import { Curtains } from "react-curtains";
 // import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
-import ChatBot from 'react-simple-chatbot';
+// import ChatBot from 'react-simple-chatbot';
 import TriggerText from "../components/TriggerText"
 
 import memojiBot from "../assets/imgs/emoji.png"
@@ -83,29 +83,29 @@ const Layout = ({ children, location }) => {
         {/*<TriggerText threshold=".5" delay="4">*/}
           <div className="chat-bot-wrapper">
 
-            <ChatBot
-              style={{ display: isShown ? 'block' : 'none' }}
-              botAvatar={memojiBot}
-              userAvatar={memojiUser}
-              placeholder="Napisz wiadomość"
-              steps={[
-                {
-                  id: '1',
-                  message: 'Cześć, zapoznajmy się. Jestem Mateusz, a Ty?',
-                  trigger: '2',
-                },
-                {
-                  id: '2',
-                  user: true,
-                  trigger: '3',
-                },
-                {
-                  id: '3',
-                  message: 'Cześć {previousValue}, miło Cię poznać!',
-                  end: true,
-                },
-              ]}
-            />
+            {/*<ChatBot*/}
+            {/*  style={{ display: isShown ? 'block' : 'none' }}*/}
+            {/*  botAvatar={memojiBot}*/}
+            {/*  userAvatar={memojiUser}*/}
+            {/*  placeholder="Napisz wiadomość"*/}
+            {/*  steps={[*/}
+            {/*    {*/}
+            {/*      id: '1',*/}
+            {/*      message: 'Cześć, zapoznajmy się. Jestem Mateusz, a Ty?',*/}
+            {/*      trigger: '2',*/}
+            {/*    },*/}
+            {/*    {*/}
+            {/*      id: '2',*/}
+            {/*      user: true,*/}
+            {/*      trigger: '3',*/}
+            {/*    },*/}
+            {/*    {*/}
+            {/*      id: '3',*/}
+            {/*      message: 'Cześć {previousValue}, miło Cię poznać!',*/}
+            {/*      end: true,*/}
+            {/*    },*/}
+            {/*  ]}*/}
+            {/*/>*/}
 
             <img src={memoji} alt="Lumina" className="emoji" width={140} onClick={() => setIsShown(!isShown)} />
           </div>

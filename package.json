@@ -47,8 +47,7 @@
     "react-markdown": "^7.1.1",
     "react-three": "^0.9.7",
     "three": "^0.135.0",
-    "react-simple-chatbot": "^0.6.1",
-    "styled-components": "^5.3.3"
+    "react-simple-chatbot": "^0.6.1"
   },
   "devDependencies": {
     "prettier": "2.5.1"
