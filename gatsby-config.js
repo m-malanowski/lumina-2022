@@ -14,7 +14,7 @@ module.exports = {
     siteUrl: "https://lumina.studio",
   },
   plugins: [
-    `gatsby-plugin-sass`,
+    // `gatsby-plugin-sass`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -25,6 +25,13 @@ module.exports = {
       options: {
         name: `assets`,
         path: `${__dirname}/src/assets/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        // postCssPlugins: [autoprefixer()],
+        implementation: require('sass'),
       },
     },
     {
