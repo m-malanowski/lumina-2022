@@ -15,6 +15,7 @@ import memojiBot from "../assets/imgs/emoji.png"
 import memojiUser from "../assets/imgs/emojiUser.png"
 
 import memoji from "../assets/memoji.gif"
+import FakeLoader from "./FakeLoader"
 
 const Layout = ({ children, location }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -26,6 +27,8 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+      <FakeLoader />
+
       <Navbar isOpen={isOpen} toggleSideBar={toggleSideBar} />
       <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
 
