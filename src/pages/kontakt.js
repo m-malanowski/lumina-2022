@@ -1,13 +1,10 @@
 import React, { useRef } from "react"
-import Footer from "../components/Footer"
 import { Helmet } from "react-helmet"
 import SEO from "../components/SEO"
 import Worldwide from "../components/Worldwide"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
-
 import SectionMarquee from "../components/SectionMarquee"
 import Foooter from "../components/Foooter"
-import globe from "../assets/icons/globe.svg"
 
 const Kontakt = () => {
   const containerRef = useRef(null)
@@ -58,18 +55,10 @@ const Kontakt = () => {
             <div className="address">
               <h2>Adres</h2>
               <ul>
-                <li>Wrocław: Moniuszki 3/45</li>
-                <li>Elbląg: hello@lumina.studio</li>
+                <li>Wrocław: Rybacka</li>
+                <li>Elbląg: Moniuszki 3/45</li>
               </ul>
             </div>
-
-            {/*<div className="address">*/}
-            {/*  <h2>Zainteresowany <br/> współpracą?</h2>*/}
-            {/*  <ul>*/}
-            {/*    <li>Email: <a className="link link--kale" href="">info@lumina.studio</a></li>*/}
-            {/*  </ul>*/}
-            {/*</div>*/}
-
 
             <div className="stars-wrapper contact">
               <div className="star star-one"></div>

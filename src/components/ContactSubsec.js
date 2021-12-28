@@ -16,7 +16,8 @@ const ContactSubsec = () => {
           data-scroll
           data-scroll-speed="-.2"
         >Send us an email with a brief description of your <br /> company and
-          suggestions on our future cooperation </p>
+          suggestions on our future cooperation
+        </p>
        </TriggerText>
 
       {/*<Link to="/kontakt" className="cta-btn" > Rozpocznij projekt </Link>*/}
@@ -27,8 +28,8 @@ const ContactSubsec = () => {
           title="hello@lumina.studio" url="/kontakt"/>
 
       <div className="bg-dots cta-section">
-        <div className="item item-1" data-scroll data-scroll-speed="-2"></div>
-        <div className="item item-2" data-scroll data-scroll-speed="-1"></div>
+        <div className="item item-1" ></div>
+        {/*<div className="item item-2" ></div>*/}
       </div>
 
       <div className="stars-wrapper">

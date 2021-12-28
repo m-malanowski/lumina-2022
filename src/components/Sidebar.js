@@ -1,20 +1,13 @@
 import React, { useRef, useEffect } from "react";
-// import Links from "../constants/links"
 import Socials from "../constants/socialLinks"
-// import orbitMain from "../assets/icons/orbitMain.png";
-import mickyHand1 from "../assets/imgs/starSmallBlack.svg"
-import mickyHand2 from "../assets/imgs/cloverSmallBlack.svg"
-import mickyHand3 from "../assets/imgs/smallStarBlack.svg"
-import mickyHand4 from "../assets/icons/asterisk.svg"
 import { Link } from "gatsby"
 import { gsap } from "gsap";
 import trueStart from "../assets/icons/true-star.svg"
-// import elo from "../assets/imgs/stickerLogo.png"
 import {
   staggerText,
   staggerReveal,
   fadeInUp,
-  // staggerTextClose,
+  staggerTextClose,
   // handleHover,
   // handleHoverExit,
   // handleCityReturn,
@@ -26,7 +19,6 @@ const Sidebar = ({toggleSideBar, isOpen}) => {
   let menuLayer = useRef(null);
   let reveal1 = useRef(null);
   let reveal2 = useRef(null);
-  // let cityBackground = useRef(null);
   let line1 = useRef(null);
   let line2 = useRef(null);
   let line3 = useRef(null);

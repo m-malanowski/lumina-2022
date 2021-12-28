@@ -263,7 +263,7 @@ const ONas = () => {
 
           <Worldwide />
 
-          <section className="index-process">
+          <section className="articles-subsection">
             <div className="subsec-header">
               <TriggerText threshold=".25" delay=".25">
                 <h2 className="subsec-title">Artykuły</h2>
@@ -282,9 +282,7 @@ const ONas = () => {
             </section>
           </section>
 
-
           {/*<AboutSectionAccordion/>*/}
-
 
           <ContactSubsec />
           <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}

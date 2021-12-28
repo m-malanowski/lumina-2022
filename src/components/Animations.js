@@ -17,7 +17,7 @@ export const staggerReveal = (node1, node2) => {
 // CLOSE MENU
 export const staggerRevealClose = (node1, node2) => {
   gsap.to([node1, node2], {
-    duration: 0.8,
+    duration: 0.7,
     height: 0,
     ease: "power3.inOut",
     stagger: {

@@ -82,7 +82,7 @@ const HomePage = () => {
            schemaMarkup={schema}
       />
 
-      <FakeLoader className="fake-loader-wrapper"> </FakeLoader>
+      <FakeLoader className="fake-loader-wrapper"/>
 
       <LocomotiveScrollProvider
         options={
@@ -375,14 +375,14 @@ const HomePage = () => {
             <section className="new-index-projects">
               {/*<Worldwide />*/}
 
-              <TriggerImg delay={.5} threshold={0}>
-                <div className="globe-stars-wrapper stars-wrapper">
-                  <img className="globe mb-5" width="125" src={globe} alt="Agencja interaktywna lumina studio" />
-                    <div className="star star-one"></div>
-                    <div className="star star-two"></div>
-                    <div className="star star-three"></div>
-                </div>
-              </TriggerImg>
+              {/*<TriggerImg delay={.5} threshold={0}>*/}
+              {/*  <div className="globe-stars-wrapper stars-wrapper">*/}
+              {/*    <img className="globe mb-5" width="125" src={globe} alt="Agencja interaktywna lumina studio" />*/}
+              {/*      <div className="star star-one"></div>*/}
+              {/*      <div className="star star-two"></div>*/}
+              {/*      <div className="star star-three"></div>*/}
+              {/*  </div>*/}
+              {/*</TriggerImg>*/}
 
               <div className="subsec-header">
                 <TriggerText threshold=".5" delay=".5">
@@ -400,10 +400,10 @@ const HomePage = () => {
               {/*<Link to="/kontakt" className="cta-btn" > Rozpocznij projekt </Link>*/}
 
 
-              <MainBtn
-                data-scroll
-                data-scroll-speed="-1"
-                title="Więcej projektów" url="/agencja-interaktywna-realizacje"/>
+              {/*<MainBtn*/}
+              {/*  data-scroll*/}
+              {/*  data-scroll-speed="-1"*/}
+              {/*  title="Więcej projektów" url="/agencja-interaktywna-realizacje"/>*/}
 
               {/*<div className="projects-btn">*/}
               {/*  <div className="service-title">*/}
@@ -411,6 +411,15 @@ const HomePage = () => {
               {/*    <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />*/}
               {/*  </div>*/}
               {/*</div>*/}
+
+              <TriggerImg delay={.5} threshold={0}>
+                <div className="globe-stars-wrapper stars-wrapper">
+                  <img className="globe mb-5" width="125" src={globe} alt="Agencja interaktywna lumina studio" />
+                  <div className="star star-one"></div>
+                  <div className="star star-two"></div>
+                  <div className="star star-three"></div>
+                </div>
+              </TriggerImg>
 
             </section>
 
@@ -422,7 +431,7 @@ const HomePage = () => {
                             dataScrollSpeed="4" />
 
 
-            <section className="index-process">
+            <section className="articles-subsection">
               <div className="subsec-header">
                 <TriggerText threshold=".3" delay=".35">
                   <h2 className="subsec-title">Artykuły</h2>
@@ -550,10 +559,14 @@ const HomePage = () => {
 
 
             <ContactSubsec />
+
+
+
             <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
                             secondTapeScroll={true} fourthTapeScroll={false}
                             thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2" />
             <Foooter/>
+
           </motion.div>
 
         </main>
