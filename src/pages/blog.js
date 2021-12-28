@@ -11,6 +11,9 @@ import orbitAboutPage from "../assets/icons/orbitBlogPage.svg"
 import SEO from "../components/SEO"
 import arrow from "../assets/icons/right-arrow.svg"
 import smallStar from "../assets/icons/smallStar.svg"
+import ContactSubsec from "../components/ContactSubsec"
+import Foooter from "../components/Foooter"
+import trueStar from "../assets/icons/true-star.svg"
 
 // ...GatsbyImageSharpFluid
 
@@ -29,57 +32,19 @@ const Blog = () => {
         watch={[]}
       >
       <main className="blog-page container-fluid"  data-scroll-container ref={containerRef}>
-        {/*<div className="page-content">*/}
 
-        {/*  <div className="subsec-header">*/}
-        {/*    <h5 className="">01.</h5>*/}
-        {/*    <h2 className="subsec-title">Blog</h2>*/}
-        {/*  </div>*/}
-
-
-        {/*  <div className="subsec-body">*/}
-        {/*    /!*<div className="ss-body-first"/>*!/*/}
-        {/*    <div className="ss-body-second">*/}
-        {/*      <p>Iceland hell of XOXO post-ironic, next level skateboard scenester cornhole tacos distillery. Slow-carb tofu wolf, <em> ennui gastropub four</em> dollar toast direct trade narwhal post-ironic blog tilde fanny pack disrupt. Fingerstache you probably haven't heard of them synth 90's.</p>*/}
-        {/*      <span>Things we made</span>*/}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*  <div className="scroll-down-pages">*/}
-        {/*    <img width="100" src={arrowDown} alt="" />*/}
-        {/*    /!*<img width="150" src={handDown} alt="" />*!/*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-
-        {/*<section className="services-page-slider break-out">*/}
-        {/*  <ArticlesSlider/>*/}
-        {/*</section>*/}
-
-        {/*<SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true} secondTapeScroll={true}*/}
-        {/*                thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2"/>*/}
-        {/*<Worldwide/>*/}
-
-        <section className="section-blog-container">
-          <div className="main-container">
-
-            <TriggerText threshold=".5" delay=".2">
-              <h2>Blog</h2>
-            </TriggerText>
-
-            {/*<TriggerImg delay={1}>*/}
-            {/*  <img*/}
-            {/*    data-scroll*/}
-            {/*    data-scroll-speed="1"*/}
-            {/*    data-scroll-position="top"*/}
-            {/*    className="orbit-blog" width="60%" src={orbitAboutPage} alt="" />*/}
-            {/*</TriggerImg>*/}
-          </div>
-        </section>
+        <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
+                        secondTapeScroll={false} fourthTapeScroll={false}
+                        thirdTapeScroll={false}
+                        subSectionMarqueeTitle={true}
+                        title="Blog"
+                        dataScrollPosition="bottom" dataScrollSpeed="2" />
 
         <section className="blog-page-subsec-wrapper">
           <div className="new-subsec-body">
             <div className="subsec-span-wprapper">
-              <img className="rotating-star" src={smallStar}
-                   alt="Lumina Studio" />
+              <img className='rotating-star' src={trueStar} width={30} alt="" />
+
               <TriggerText threshold=".5" delay=".5">
                 <span className="subsec-span">Why we do what we do</span>
               </TriggerText>
@@ -151,20 +116,14 @@ const Blog = () => {
         <div className="projects-btn">
           <div className="service-title">
             <h5>Wczytaj więcej</h5>
-            <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
+            <img src={arrow} alt="" width="28px" classNam e="ml-2 align-self-start" />
           </div>
         </div>
 
-
-        {/*<section className="services-page-slider break-out">*/}
-        {/*  <ArticlesSlider/>*/}
-        {/*</section>*/}
-
-        <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true} secondTapeScroll={true}
-                        thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2"/>
-
-        <Worldwide />
-        <LowerFooter />
+        <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
+                        secondTapeScroll={true}
+                        thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2" />
+        <Foooter />
 
       </main>
       </LocomotiveScrollProvider>

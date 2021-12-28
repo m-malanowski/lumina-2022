@@ -136,7 +136,6 @@ export const Image = ({src, active, x, y, alt}) => {
   const [ref, {width, height}] = useSize();
   return(
     <>
-
       <img
         width="800px"
         className={ active ? 'is-active' : 'no-active'}

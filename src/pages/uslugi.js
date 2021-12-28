@@ -1,34 +1,18 @@
 import React, { useRef } from "react"
-import LowerFooter from "../components/LowerFooter"
 import Worldwide from "../components/Worldwide"
 import SectionMarquee from "../components/SectionMarquee"
 import TriggerText from "../components/TriggerText"
 import TriggerImg from "../components/TriggerImg"
-import TriggerLine from "../components/TriggerLine"
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-import orbitMain from "../assets/icons/orbitServicesViewNew.svg"
 import serviceStickers from "../assets/icons/serviceStickers.svg"
 import serviceStickersSmall from "../assets/icons/serviceStickersSmall.svg"
-// import aboutServiceStar1 from "../assets/icons/aboutServiceStar1.svg"
-// import aboutServiceStar2 from "../assets/icons/aboutServiceStar2.svg"
 import SEO from "../components/SEO"
-import smallStar from "../assets/icons/smallStar.svg"
 import AboutSectionAccordion from "../components/AboutSectionAccordion"
-
-import serviceOrbit1 from "../assets/icons/serviceOrbit1.svg"
-import serviceOrbit2 from "../assets/icons/serviceOrbit2.svg"
-import serviceOrbit3 from "../assets/icons/serviceOrbit3.svg"
-import serviceOrbit4 from "../assets/icons/serviceOrbit4.svg"
-import serviceOrbit5 from "../assets/icons/serviceOrbit5.svg"
-import serviceOrbit6 from "../assets/icons/serviceOrbit6.svg"
-import handDown from "../assets/icons/handDown.svg"
-import arrow from "../assets/icons/right-arrow.svg"
 import ArticlesSlider from "../components/ArticlesSlider"
 import ContactSubsec from "../components/ContactSubsec"
 import Foooter from "../components/Foooter"
+import globe from "../assets/icons/globe.svg"
 
-
-// ...GatsbyImageSharpFluid
 const Uslugi = () => {
 
   const containerRef = useRef(null)
@@ -119,6 +103,16 @@ const Uslugi = () => {
           <img className="service-stickers" width="100%" src={serviceStickers} alt="Lumina Studio Usługi" />
           <img className="service-stickers-small " width="100%" src={serviceStickersSmall} alt="Lumina Studio Usługi" />
         {/*</TriggerImg>*/}
+
+        <TriggerImg delay={.5} threshold={0}>
+          <div className="globe-stars-wrapper stars-wrapper">
+            <img className="globe mb-5" width="125" src={globe} alt="Agencja interaktywna lumina studio" />
+            <div className="star star-one"></div>
+            <div className="star star-two"></div>
+            <div className="star star-three"></div>
+          </div>
+        </TriggerImg>
+
 
 
         <section className="about-page-process">
@@ -462,6 +456,7 @@ const Uslugi = () => {
 
         <Worldwide />
 
+
         <section className="index-process">
           <div className="subsec-header">
             <TriggerText threshold=".25" delay=".25">
@@ -470,7 +465,7 @@ const Uslugi = () => {
               <p>Zapoznaj się z artykułami</p>
             </TriggerText>
             <TriggerText threshold=".25" delay=".25">
-              <span className="">03.</span>
+              <span className="">02.</span>
             </TriggerText>
           </div>
 

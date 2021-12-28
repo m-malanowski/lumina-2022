@@ -9,7 +9,6 @@ import Foooter from "../components/Foooter"
 const Kontakt = () => {
   const containerRef = useRef(null)
 
-
   return (
     <>
       <SEO title="LUMINA STUDIO | Kontakt. Darmowa Wycena - Strony Internetowe. Tworzenie Stron Internetowych"
@@ -43,7 +42,10 @@ const Kontakt = () => {
                           dataScrollPosition="bottom" dataScrollSpeed="2" />
 
           <div className="contact-wrapper">
-            <div className="drop-line">
+            <div className="drop-line"
+                 data-scroll
+                 data-scroll-speed="2"
+            >
               <h2>Drop us a line or two</h2>
               <ul>
                 <li>Email: <a className="link link--kale" href="">hello@lumina.studio</a></li>
@@ -52,7 +54,10 @@ const Kontakt = () => {
               </ul>
             </div>
 
-            <div className="address">
+            <div className="address"
+                 data-scroll
+                 data-scroll-speed="1"
+            >
               <h2>Adres</h2>
               <ul>
                 <li>Wrocław: Rybacka</li>
@@ -70,7 +75,6 @@ const Kontakt = () => {
               <div className="item item-1" data-scroll data-scroll-speed="-4"></div>
               <div className="item item-2" data-scroll data-scroll-speed="-2"></div>
             </div>
-
 
           </div>
 

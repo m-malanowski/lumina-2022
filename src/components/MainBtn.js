@@ -4,7 +4,8 @@ import TriggerText from "../components/TriggerText"
 
 const MainBtn = ({url, title}) => {
   return(
-    <TriggerText threshold=".4" delay=".45">
+    <TriggerText threshold=".4" delay=".45" >
+      {/*cName={"d-flex justify-content-center "}*/}
       <div className="main-btn service-title ">
         <a href={url}>
           <h5>{title}</h5>

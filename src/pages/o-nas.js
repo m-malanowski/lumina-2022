@@ -1,11 +1,5 @@
 import React, { useRef, useState, useEffect } from "react"
-import LowerFooter from "../components/LowerFooter"
-import orbitAboutPage from "../assets/imgs/orbit-about.svg"
-import arrow from "../assets/icons/right-arrow.svg"
-import serviceStickers from "../assets/icons/serviceStickers.svg"
-import serviceStickersSmall from "../assets/icons/serviceStickersSmall.svg"
 import SEO from "../components/SEO"
-
 import Worldwide from "../components/Worldwide"
 import SectionMarquee from "../components/SectionMarquee"
 import { motion } from "framer-motion"
@@ -196,16 +190,17 @@ const ONas = () => {
                        data-scroll-speed="-1"
                   >
                     <div>
-                      <h5>01.</h5>
+                      {/*<h5>01.</h5>*/}
                       <h3>Web development</h3>
                     </div>
                     <div>
                       <p>Gluten-free skateboard YOLO, fam semiotics deep v selfies
                         farm-to-table <em>asymmetrical</em> vice fashion axe tacos pug helvetica. Tote bag before they
                         sold out bespoke, health goth food truck chillwave copper mug quinoa poke bitters. Brooklyn la
-                        croix microdosing.</p>
-
+                        croix microdosing.
+                      </p>
                     </div>
+
                   </div>
                 </TriggerText>
 
@@ -221,6 +216,7 @@ const ONas = () => {
                       <p>Gluten-free skateboard YOLO, fam semiotics deep v selfies farm-to-table asymmetrical vice
                         fashion axe tacos pug helvetica. Tote bag before they sold out bespoke, health goth food truck
                         chillwave copper mug quinoa poke bitters. <em>Brooklyn</em> la croix microdosing.</p>
+
                     </div>
                   </div>
                 </TriggerText>

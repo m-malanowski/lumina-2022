@@ -5,6 +5,8 @@ import TriggerLine from "./TriggerLine"
 import ProjectsData from "./ProjectsData"
 import { Link } from "gatsby"
 import TriggerImg from "./TriggerImg"
+import trueStar from "../assets/icons/true-star.svg"
+import GlobeWithStars from "./GlobeWithStars"
 
 
 const useMousePosition = () => {
@@ -62,14 +64,17 @@ const ProjectsSubsection = () => {
           <div className="subsec-span-wprapper">
 
             <TriggerImg>
-              <div className="star"></div>
+              {/*<div className="star"></div>*/}
+              <img className='rotating-star' src={trueStar} width={30} alt="" />
             </TriggerImg>
 
             <TriggerText threshold=".35" delay=".35">
-                    <span
-                      data-scroll
-                      data-scroll-speed="-3.5"
-                      className="subsec-span">Why we do what we do</span>
+              <span
+                data-scroll
+                data-scroll-speed="-3.5"
+                className="subsec-span">
+                   Projekty
+              </span>
             </TriggerText>
           </div>
           <TriggerText threshold=".45" delay=".35">
@@ -80,21 +85,22 @@ const ProjectsSubsection = () => {
               Brooklyn man bun intellige dard slow-carb flannel. Ramps
               church-key umami dreamcatcher <em>jean chips </em>
             </p>
-          </TriggerText>
 
-        </div>
-
-
-        <div className="subsec-header">
-          <TriggerText threshold=".5" delay=".5">
-            <h2 className="subsec-title">Artykuły</h2>
-            {/*<br />*/}
-            {/*<p>Zapoznaj się z artykułami</p>*/}
-          </TriggerText>
-          <TriggerText threshold=".5" delay=".5">
-            <span className="">03.</span>
           </TriggerText>
         </div>
+
+        <GlobeWithStars/>
+
+        {/*<div className="subsec-header">*/}
+        {/*  <TriggerText threshold=".5" delay=".5">*/}
+        {/*    <h2 className="subsec-title">Projekty</h2>*/}
+        {/*    /!*<br />*!/*/}
+        {/*    /!*<p>Zapoznaj się z artykułami</p>*!/*/}
+        {/*  </TriggerText>*/}
+        {/*  <TriggerText threshold=".5" delay=".5">*/}
+        {/*    <span className="">01.</span>*/}
+        {/*  </TriggerText>*/}
+        {/*</div>*/}
 
         <div className="works-page-projects-wrapper">
 
@@ -130,15 +136,18 @@ export const Desc = ({title, year, services, imgPath, setActiveIndex, index}) =>
         </TriggerLine>
         <div className="more-left">
           <TriggerText threshold=".5" delay=".5">
-            <span>{year}</span>
+            <span>{services}</span>
           </TriggerText>
-          <TriggerText threshold=".5" delay=".5">
-            <h5><Link to={imgPath}>{title}</Link></h5>
-          </TriggerText>
+          {/*<TriggerText threshold=".5" delay=".5">*/}
+          {/*  <h5><Link to={imgPath}>{title}</Link></h5>*/}
+          {/*</TriggerText>*/}
         </div>
-        <TriggerText threshold=".5" delay=".5">
-          <p className="more-right">{services}</p>
+        <TriggerText threshold=".5" delay=".5" cName={"more-right"}>
+          <Link to={imgPath}><h5>{title}</h5></Link>
         </TriggerText>
+        {/*<TriggerText threshold=".5" delay=".5">*/}
+          {/*<p className="more-right">{services}</p>*/}
+        {/*</TriggerText>*/}
       </div>
 
       {/*<TriggerLine threshold=".5" delay=".5">*/}
@@ -152,16 +161,19 @@ export const Image = ({src, active, x, y, alt}) => {
   const [ref, {width, height}] = useSize();
   return(
     <>
-      <img
-        width="400px"
-        className={ active ? 'is-active' : 'no-active'}
-        src={src}
-        ref={ref}
-        alt={alt}
-        style={{
-          transform: `translate(${ x - width/10 }px, ${ y - height/1 }px)`,
-        }}
-      />
+      <div className={ active ? 'is-active img-wrapper' : 'no-active img-wrapper'}
+           style={{
+             transform: `translate(${ x - width/10 }px, ${ y - height/2 }px)`,
+           }}
+      >
+        <img
+          width="400px"
+          className={ active ? 'is-active' : 'no-active'}
+          src={src}
+          ref={ref}
+          alt={alt}
+        />
+      </div>
     </>
 
   )
