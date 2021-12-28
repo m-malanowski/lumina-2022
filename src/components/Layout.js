@@ -27,7 +27,7 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Navbar isOpen={isOpen} toggleSideBar={toggleSideBar} />
-      {/*<Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />*/}
+      <Sidebar isOpen={isOpen} toggleSideBar={toggleSideBar} />
 
       <AnimatePresence initial={true} exitBeforeEnter className="pages-wrapper">
         <motion.div

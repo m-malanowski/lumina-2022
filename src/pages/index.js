@@ -82,7 +82,7 @@ const HomePage = () => {
            schemaMarkup={schema}
       />
 
-      <FakeLoader className="fake-loader-wrapper"/>
+      <FakeLoader />
 
       <LocomotiveScrollProvider
         options={
