@@ -10,6 +10,7 @@ import logo from "../assets/logo.svg"
 import TriggerText from "../components/TriggerText"
 import MainBtn from "./MainBtn"
 import trueStar from "../assets/icons/true-star.svg"
+import globeRotating from "../assets/imgs/globe-rotating.gif"
 
 const Navbar = ({ toggleSideBar, isOpen }) => {
   return (
@@ -38,7 +39,7 @@ const Navbar = ({ toggleSideBar, isOpen }) => {
 
       {/*<PageLinks styleClass="nav-links"/>*/}
 
-      <img className='rotating-star' src={trueStar} width={30} alt="" />
+      <img className='rotating-star' src={globeRotating} width={30} alt="" />
 
       <div className="navbar-right">
         {/*<TriggerText threshold=".5" delay="4">*/}

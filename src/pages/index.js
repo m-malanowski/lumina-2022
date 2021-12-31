@@ -27,6 +27,7 @@ import globe from "../assets/icons/globe.svg"
 import MainBtn from "../components/MainBtn"
 import trueStar from "../assets/icons/true-star.svg"
 import GlobeWithStars from "../components/GlobeWithStars"
+import SuperNewIndexProjects from "../components/SuperNewIndexProjects"
 
 const HomePage = () => {
 
@@ -393,6 +394,9 @@ const HomePage = () => {
                 </TriggerText>
               </div>
 
+
+              {/*<SuperNewIndexProjects ></SuperNewIndexProjects>*/}
+
               <TriggerText threshold=".25" delay=".25">
                 <IndexProjects></IndexProjects>
               </TriggerText>
@@ -420,7 +424,6 @@ const HomePage = () => {
               {/*  title="Więcej projektów" url="/agencja-interaktywna-realizacje"/>*/}
 
               <GlobeWithStars/>
-
 
             </section>
 
@@ -450,6 +453,7 @@ const HomePage = () => {
                 </TriggerText>
               </section>
             </section>
+
 
             <ContactSubsec />
 

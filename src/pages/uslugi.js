@@ -141,7 +141,6 @@ const Uslugi = () => {
           <AboutSectionAccordion/>
 
 
-
           {/*<div className="new-services">*/}
           {/*  <div>*/}
           {/*    <span>01</span>*/}
@@ -463,6 +462,9 @@ const Uslugi = () => {
               <h2 className="subsec-title">Artykuły</h2>
               <br />
               <p>Zapoznaj się z artykułami</p>
+              <br /><br />
+              <a href="" className="test-btn ">Więcej artykułów</a>
+
             </TriggerText>
             <TriggerText threshold=".25" delay=".25">
               <span className="">02.</span>

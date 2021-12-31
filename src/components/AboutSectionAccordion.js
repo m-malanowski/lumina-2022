@@ -45,7 +45,10 @@ const AboutSectionAccordion = () => {
           <TriggerText threshold=".25" delay=".15">
             <h2 className="subsec-title">Usługi</h2>
             <br />
-            <p><p>Zapoznaj się z naszymi usługami</p></p>
+            <p>Zapoznaj się z naszymi usługami</p>
+            <br /><br />
+            <a href="" className="test-btn ">Umów spotkanie</a>
+
           </TriggerText>
           <TriggerText threshold=".25" delay=".15">
             <h5 className="">01.</h5>
@@ -56,17 +59,19 @@ const AboutSectionAccordion = () => {
           <div className="about-process-single-top">
             <div className="about-process-single-top__inner"/>
 
-            <TriggerLine threshold=".1" delay=".15">
-              <hr className="animated" />
-            </TriggerLine>
+            {/*<TriggerLine threshold=".1" delay=".15">*/}
+            {/*  <hr className="animated" />*/}
+            {/*</TriggerLine>*/}
 
             <div>
               <TriggerText threshold=".5" delay=".35">
-                <span>01.</span>
+                {/*<span>01.</span>*/}
+                <p onClick={() => setIsOpen1(!isOpen1)}> Design </p>
               </TriggerText>
             </div>
             <TriggerText threshold=".5" delay=".4">
               <p onClick={() => setIsOpen1(!isOpen1)}> Design </p>
+
             </TriggerText>
             <TriggerText threshold=".5" delay="1.2" cName="img-wrapper">
               <motion.img
@@ -121,7 +126,9 @@ const AboutSectionAccordion = () => {
 
             <div>
               <TriggerText threshold=".5" delay=".35">
-                <span>02.</span>
+                {/*<span>02.</span>*/}
+
+                <p onClick={() => setIsOpen2(!isOpen2)}>Web Development</p>
               </TriggerText>
             </div>
 
@@ -179,7 +186,9 @@ const AboutSectionAccordion = () => {
 
             <div>
               <TriggerText threshold=".5" delay=".35">
-                <span>03.</span>
+                {/*<span>03.</span>*/}
+                <p onClick={() => setIsOpen3(!isOpen3)}>Branding</p>
+
               </TriggerText>
             </div>
 
@@ -238,7 +247,9 @@ const AboutSectionAccordion = () => {
 
             <div>
               <TriggerText threshold=".5" delay=".35">
-                <span>04.</span>
+                {/*<span>04.</span>*/}
+                <p onClick={() => setIsOpen4(!isOpen4)}>Digital</p>
+
               </TriggerText>
             </div>
 
@@ -297,7 +308,9 @@ const AboutSectionAccordion = () => {
 
             <div>
               <TriggerText threshold=".5" delay=".35">
-                <span>05.</span>
+                {/*<span>05.</span>*/}
+                <p onClick={() => setIsOpen5(!isOpen5)}>Social media</p>
+
               </TriggerText>
 
             </div>
@@ -344,9 +357,9 @@ const AboutSectionAccordion = () => {
               <a href="" className="test-btn">Ilustracja</a>
             </div>
           </motion.div>
-          <TriggerLine threshold=".5" delay=".25">
-            <hr className="animated last" />
-          </TriggerLine>
+          {/*<TriggerLine threshold=".5" delay=".25">*/}
+          {/*  <hr className="animated last" />*/}
+          {/*</TriggerLine>*/}
         </div>
 
       </section>

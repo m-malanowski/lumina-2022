@@ -31,9 +31,14 @@
       //font-family: var(--ff-secondary);
       font-family: var(--ff-secondary-bold);
       //&:nth-of-type(odd){
+      display: flex;
       &:after{
-        content: '/';
-        font-family: var(--ff-secondary-lig);
+        //content: '/';
+        content: "";
+        background: url("../assets/icons/right-arrow.svg") no-repeat;
+        //font-family: var(--ff-secondary-lig);
+        width: 50px;
+        vertical-align: text-bottom;
       }
       //}
       &:hover{
@@ -54,6 +59,17 @@
       font-style: italic;
       vertical-align: text-top;
     }
+    .project-title{
+      &.is-active {
+        position: relative;
+        z-index: 1000001;
+      }
+      &.no-active{
+        position: relative;
+        //z-index: -1;
+      }
+    }
+
   }
   .project-img{
     position: absolute;

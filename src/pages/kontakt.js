@@ -5,6 +5,7 @@ import Worldwide from "../components/Worldwide"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 import SectionMarquee from "../components/SectionMarquee"
 import Foooter from "../components/Foooter"
+import img from "../assets/imgs/globe-rotating.gif"
 
 const Kontakt = () => {
   const containerRef = useRef(null)
@@ -60,8 +61,9 @@ const Kontakt = () => {
             >
               <h2>Adres</h2>
               <ul>
-                <li>Wrocław: Rybacka</li>
-                <li>Elbląg: Moniuszki 3/45</li>
+                <li>👩‍💻  Pracujemy 🏠 zdalnie  </li>
+                <li>Z Elbląga i Wrocławia</li>
+                {/*<li>Elbląg: Moniuszki 3/45</li>*/}
               </ul>
             </div>
 
@@ -75,6 +77,8 @@ const Kontakt = () => {
               <div className="item item-1" data-scroll data-scroll-speed="-4"></div>
               <div className="item item-2" data-scroll data-scroll-speed="-2"></div>
             </div>
+
+            <img src={img} width={35} alt="" />
 
           </div>
 

@@ -21,11 +21,15 @@ const ContactSubsec = () => {
        </TriggerText>
 
       {/*<Link to="/kontakt" className="cta-btn" > Rozpocznij projekt </Link>*/}
+      <TriggerText threshold=".4" delay=".35" >
+        <br/> <br/>
+        <a href="" className="test-btn">Skontaktuj się</a>
+      </TriggerText>
 
-      <MainBtn
-          data-scroll
-          data-scroll-speed="-1"
-          title="hello@lumina.studio" url="/kontakt"/>
+      {/*<MainBtn*/}
+      {/*    data-scroll*/}
+      {/*    data-scroll-speed="-1"*/}
+      {/*    title="hello@lumina.studio" url="/kontakt"/>*/}
 
       <div className="bg-dots cta-section">
         <div className="item item-1" ></div>

@@ -98,9 +98,13 @@ const IndexProjects = () => {
     <>
       <div className="projects-wrapper">
 
-        {ProjectsData.map(({title, year, imgPath, services}, index) => (
-          <Desc key={index}  title={title} year={year} imgPath={imgPath} services={services} setActiveIndex={setActiveIndex} index={index} />
-        ))}
+        {ProjectsData.map(({title, year, imgPath, services}, index) => {
+          const isActive = index === activeIndex;
+
+          return <Desc key={index} active={isActive} title={title} year={year} imgPath={imgPath}
+                       services={services} setActiveIndex={setActiveIndex} index={index} />
+
+        })}
 
         <div className="project-img">
           {ProjectsData.map(({src,alt}, index) => {
@@ -118,14 +122,16 @@ const IndexProjects = () => {
 }
 
 
-export const Desc = ({title, year, services, imgPath, setActiveIndex, index}) => {
+export const Desc = ({title, year, services, imgPath, setActiveIndex, index, active}) => {
   return(
     <div>
-      <div className=""
+      <div
            onMouseEnter={()=>setActiveIndex(index)}
            onMouseLeave={()=>setActiveIndex(-1)}
       >
-        <Link to={imgPath} >  <h5>{title} <span>{year}</span></h5> </Link>
+        <Link
+          className={ active ? 'is-active project-title' : 'no-active project-title'}
+          to={imgPath} >  <h5>{title} <span>{year}</span></h5> </Link>
       </div>
 
     </div>
