@@ -6,7 +6,7 @@ import TriggerText from "../components/TriggerText"
 
 const ContactSubsec = () => {
   return (
-    <section className="cta-section">
+    <section className="cta-section break-out">
       <TriggerText threshold=".4" delay=".25">
         <h2>Stwórzmy coś!</h2>
       </TriggerText>

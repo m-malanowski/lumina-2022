@@ -1,4 +1,4 @@
-import React, { useCallback, useLayoutEffect  } from "react"
+import React, { useCallback, useLayoutEffect } from "react"
 import { useEffect, useState } from "react"
 import TriggerText from "../components/TriggerText"
 import TriggerLine from "./TriggerLine"
@@ -7,65 +7,66 @@ import { Link } from "gatsby"
 import TriggerImg from "./TriggerImg"
 import trueStar from "../assets/icons/true-star.svg"
 import GlobeWithStars from "./GlobeWithStars"
+import arrow from "../assets/icons/right-arrow.svg"
 
 
 const useMousePosition = () => {
-  const [ mousePosition, setMousePosition ] = React.useState({x:0,y:0})
+  const [mousePosition, setMousePosition] = React.useState({ x: 0, y: 0 })
 
-  useEffect(()=>{
+  useEffect(() => {
 
     const updateMousePosition = event => {
-      setMousePosition({x: event.clientX, y: event.clientY})
+      setMousePosition({ x: event.clientX, y: event.clientY })
     }
-    window.addEventListener('mousemove', updateMousePosition)
+    window.addEventListener("mousemove", updateMousePosition)
 
-    return () => window.removeEventListener('mousemove',updateMousePosition)
+    return () => window.removeEventListener("mousemove", updateMousePosition)
   }, [])
 
-  return mousePosition;
+  return mousePosition
 }
 
 const getDimensionObject = node => {
-  const rect = node.getBoundingClientRect();
+  const rect = node.getBoundingClientRect()
   return {
     width: rect.width,
     height: rect.height
   }
 }
 
-  const useSize = () => {
-    const [ dimensions, setDimensions] = useState({});
-    const [ node, setNode ] = useState(null);
+const useSize = () => {
+  const [dimensions, setDimensions] = useState({})
+  const [node, setNode] = useState(null)
 
-    const ref = useCallback(node => {
-      setNode(node)
-    }, [])
+  const ref = useCallback(node => {
+    setNode(node)
+  }, [])
 
-    useLayoutEffect(()=>{
-      if(node){
-        const measure = () => setDimensions(getDimensionObject(node))
-        measure()
-      }
-    }, [node])
-    return [ref, dimensions]
-  }
+  useLayoutEffect(() => {
+    if (node) {
+      const measure = () => setDimensions(getDimensionObject(node))
+      measure()
+    }
+  }, [node])
+  return [ref, dimensions]
+}
 
 
 const ProjectsSubsection = () => {
   const [activeIndex, setActiveIndex] = React.useState(-1)
-  const { x, y } = useMousePosition();
+  const { x, y } = useMousePosition()
   // console.log(x, y)
   return (
     <>
       {/*<ImgPlane/>*/}
-      <section className="section-more-projects" >
+      <section className="section-more-projects">
 
         <div className="new-subsec-body">
           <div className="subsec-span-wprapper">
 
             <TriggerImg>
               {/*<div className="star"></div>*/}
-              <img className='rotating-star' src={trueStar} width={30} alt="" />
+              <img className="rotating-star" src={trueStar} width={30} alt="" />
             </TriggerImg>
 
             <TriggerText threshold=".35" delay=".35">
@@ -89,7 +90,7 @@ const ProjectsSubsection = () => {
           </TriggerText>
         </div>
 
-        <GlobeWithStars/>
+        <GlobeWithStars />
 
         {/*<div className="subsec-header">*/}
         {/*  <TriggerText threshold=".5" delay=".5">*/}
@@ -102,73 +103,93 @@ const ProjectsSubsection = () => {
         {/*  </TriggerText>*/}
         {/*</div>*/}
 
-        <div className="works-page-projects-wrapper">
+        <div className="blog-wrapper">
+          <div className="blog-table">
+            {ProjectsData.map(({ title, year, imgPath, services }, index) => (
+              <Desc key={index} title={title} year={year} imgPath={imgPath} services={services}
+                    setActiveIndex={setActiveIndex} index={index} />
+            ))}
 
-          {ProjectsData.map(({title, year, imgPath, services}, index) => (
-            <Desc key={index}  title={title} year={year} imgPath={imgPath} services={services} setActiveIndex={setActiveIndex} index={index} />
-          ))}
+            <div className="project-img">
+              {ProjectsData.map(({ src, alt }, index) => {
+                const isActive = index === activeIndex
+                const xPos = isActive ? x : 0
+                const yPos = isActive ? y : 0
 
-          <div className="project-img">
-            {ProjectsData.map(({src,alt}, index) => {
-              const isActive = index === activeIndex;
-              const xPos = isActive ? x : 0;
-              const yPos = isActive ? y : 0;
-
-              return  <Image key={index} alt={alt} src={src} active={isActive} x={xPos} y={yPos}/>
-            })}
+                return <Image key={index} alt={alt} src={src} active={isActive} x={xPos} y={yPos} />
+              })}
+            </div>
           </div>
-
         </div>
+
+        <TriggerText threshold=".4" delay=".35" cName="align-button-center">
+          <br/> <br/>
+          <a href="" className="test-btn">Wczytaj więcej</a>
+        </TriggerText>
+
       </section>
+
+
     </>
   )
 }
 
-export const Desc = ({title, year, services, imgPath, setActiveIndex, index}) => {
-  return(
-    <div>
-      <div className="more-projects-single"
-           onMouseEnter={()=>setActiveIndex(index)}
-           onMouseLeave={()=>setActiveIndex(-1)}
-      >
-        <TriggerLine threshold=".5" delay=".5">
-          <hr className="animated" />
-        </TriggerLine>
-        <div className="more-left">
-          <TriggerText threshold=".5" delay=".5">
-            <span>{services}</span>
-          </TriggerText>
-          {/*<TriggerText threshold=".5" delay=".5">*/}
-          {/*  <h5><Link to={imgPath}>{title}</Link></h5>*/}
-          {/*</TriggerText>*/}
-        </div>
-        <TriggerText threshold=".5" delay=".5" cName={"more-right"}>
-          <Link to={imgPath}><h5>{title}</h5></Link>
-        </TriggerText>
-        {/*<TriggerText threshold=".5" delay=".5">*/}
-          {/*<p className="more-right">{services}</p>*/}
-        {/*</TriggerText>*/}
-      </div>
+export const Desc = ({ title, year, services, imgPath, setActiveIndex, index }) => {
+  return (
+    // <div>
+    //   <div className="more-projects-single"
+    //        onMouseEnter={()=>setActiveIndex(index)}
+    //        onMouseLeave={()=>setActiveIndex(-1)}
+    //   >
+    //     <TriggerLine threshold=".5" delay=".5">
+    //       <hr className="animated" />
+    //     </TriggerLine>
+    //     <div className="more-left">
+    //       <TriggerText threshold=".5" delay=".5">
+    //         <span>{services}</span>
+    //       </TriggerText>
+    //       {/*<TriggerText threshold=".5" delay=".5">*/}
+    //       {/*  <h5><Link to={imgPath}>{title}</Link></h5>*/}
+    //       {/*</TriggerText>*/}
+    //     </div>
+    //     <TriggerText threshold=".5" delay=".5" cName={"more-right"}>
+    //       <Link to={imgPath}><h5>{title}</h5></Link>
+    //     </TriggerText>
+    //     {/*<TriggerText threshold=".5" delay=".5">*/}
+    //       {/*<p className="more-right">{services}</p>*/}
+    //     {/*</TriggerText>*/}
+    //   </div>
+    //
+    //   {/*<TriggerLine threshold=".5" delay=".5">*/}
+    //   {/*  <hr className="animated" />*/}
+    //   {/*</TriggerLine>*/}
+    // </div>
 
-      {/*<TriggerLine threshold=".5" delay=".5">*/}
-      {/*  <hr className="animated" />*/}
-      {/*</TriggerLine>*/}
+    <div className="article more-projects-single"
+         onMouseEnter={() => setActiveIndex(index)}
+         onMouseLeave={() => setActiveIndex(-1)}>
+      <div>
+        <h5>Web development</h5>
+        <h2>Pour-over actually</h2>
+      </div>
+      <img src={arrow} alt="" width="28px" className="ml-2" />
     </div>
+
   )
 }
 
-export const Image = ({src, active, x, y, alt}) => {
-  const [ref, {width, height}] = useSize();
-  return(
+export const Image = ({ src, active, x, y, alt }) => {
+  const [ref, { width, height }] = useSize()
+  return (
     <>
-      <div className={ active ? 'is-active img-wrapper' : 'no-active img-wrapper'}
+      <div className={active ? "is-active img-wrapper" : "no-active img-wrapper"}
            style={{
-             transform: `translate(${ x - width/10 }px, ${ y - height/2 }px)`,
+             transform: `translate(${x - width / 10}px, ${y - height / 2}px)`
            }}
       >
         <img
           width="400px"
-          className={ active ? 'is-active' : 'no-active'}
+          className={active ? "is-active" : "no-active"}
           src={src}
           ref={ref}
           alt={alt}

@@ -14,6 +14,7 @@ import smallStar from "../assets/icons/smallStar.svg"
 import ContactSubsec from "../components/ContactSubsec"
 import Foooter from "../components/Foooter"
 import trueStar from "../assets/icons/true-star.svg"
+import ProjectsSubsectionNew from "../components/ProjectsSubsectionNew"
 
 // ...GatsbyImageSharpFluid
 
@@ -40,85 +41,82 @@ const Blog = () => {
                         title="Blog"
                         dataScrollPosition="bottom" dataScrollSpeed="2" />
 
-        <section className="blog-page-subsec-wrapper">
-          <div className="new-subsec-body">
-            <div className="subsec-span-wprapper">
-              <img className='rotating-star' src={trueStar} width={30} alt="" />
+        {/*<section className="blog-page-subsec-wrapper">*/}
+        {/*  <div className="new-subsec-body">*/}
+        {/*    <div className="subsec-span-wprapper">*/}
+        {/*      <img className='rotating-star' src={trueStar} width={30} alt="" />*/}
 
-              <TriggerText threshold=".5" delay=".5">
-                <span className="subsec-span">Why we do what we do</span>
-              </TriggerText>
-            </div>
-            <TriggerText threshold=".5" delay=".5">
-              <p>
-                Brooklyn man bun intelli ale chips next level brooklyn marfa VHS bitters scenester
-                palo santo before they sold out.
-              </p>
-            </TriggerText>
-          </div>
-        </section>
+        {/*      <TriggerText threshold=".5" delay=".5">*/}
+        {/*        <span className="subsec-span">Why we do what we do</span>*/}
+        {/*      </TriggerText>*/}
+        {/*    </div>*/}
+        {/*    <TriggerText threshold=".5" delay=".5">*/}
+        {/*      <p>*/}
+        {/*        Brooklyn man bun intelli ale chips next level brooklyn marfa VHS bitters scenester*/}
+        {/*        palo santo before they sold out.*/}
+        {/*      </p>*/}
+        {/*    </TriggerText>*/}
+        {/*  </div>*/}
+        {/*</section>*/}
 
-
-        <div className="blog-wrapper">
-          <div className="blog-table">
-            <div className="article">
-              <div>
-                <h5>Web development</h5>
-                <h2>Pour-over actually</h2>
-              </div>
-              <img src={arrow} alt="" width="28px" className="ml-2" />
-            </div>
-
-            <div className="article">
-              <div>
-                <h5>Category</h5>
-                <h2> Post-ironic umami </h2>
-              </div>
-              <img src={arrow} alt="" width="28px" className="ml-2 " />
-            </div>
-
-            <div className="article">
-              <div>
-                <h5>Programowanie</h5>
-                <h2>Helvetica tattooed seitan vinyl taiyaki iPhone</h2>
-              </div>
-              <img src={arrow} alt="" width="28px" className="ml-2 " />
-            </div>
-
-            <div className="article">
-              <div>
-                <h5>Design</h5>
-                <h2>Actually waistcoat organic woke narwhal </h2>
-              </div>
-              <img src={arrow} alt="" width="28px" className="ml-2 " />
-            </div>
-
-            <div className="article">
-              <div>
-                <h5>SEO</h5>
-                <h2>Tacos neutra green juice </h2>
-              </div>
-              <img src={arrow} alt="" width="28px" className="ml-2 " />
-            </div>
-
-            <div className="article">
-              <div>
-                <h5>SEO</h5>
-                <h2>iPhone organic green waistcoat </h2>
-              </div>
-              <img src={arrow} alt="" width="28px" className="ml-2 " />
-            </div>
-
-          </div>
-        </div>
+        <ProjectsSubsectionNew/>
 
 
-        <div className="projects-btn">
-          <div className="service-title">
-            <h5>Wczytaj więcej</h5>
-            <img src={arrow} alt="" width="28px" classNam e="ml-2 align-self-start" />
-          </div>
-        </div>
+
+        {/*<div className="blog-wrapper">*/}
+        {/*  <div className="blog-table">*/}
+        {/*    <div className="article">*/}
+        {/*      <div>*/}
+        {/*        <h5>Web development</h5>*/}
+        {/*        <h2>Pour-over actually</h2>*/}
+        {/*      </div>*/}
+        {/*      <img src={arrow} alt="" width="28px" className="ml-2" />*/}
+        {/*    </div>*/}
+        
+        {/*    <div className="article">*/}
+        {/*      <div>*/}
+        {/*        <h5>Category</h5>*/}
+        {/*        <h2> Post-ironic umami </h2>*/}
+        {/*      </div>*/}
+        {/*      <img src={arrow} alt="" width="28px" className="ml-2 " />*/}
+        {/*    </div>*/}
+        
+        {/*    <div className="article">*/}
+        {/*      <div>*/}
+        {/*        <h5>Programowanie</h5>*/}
+        {/*        <h2>Helvetica tattooed seitan vinyl taiyaki iPhone</h2>*/}
+        {/*      </div>*/}
+        {/*      <img src={arrow} alt="" width="28px" className="ml-2 " />*/}
+        {/*    </div>*/}
+        
+        {/*    <div className="article">*/}
+        {/*      <div>*/}
+        {/*        <h5>Design</h5>*/}
+        {/*        <h2>Actually waistcoat organic woke narwhal </h2>*/}
+        {/*      </div>*/}
+        {/*      <img src={arrow} alt="" width="28px" className="ml-2 " />*/}
+        {/*    </div>*/}
+        
+        {/*    <div className="article">*/}
+        {/*      <div>*/}
+        {/*        <h5>SEO</h5>*/}
+        {/*        <h2>Tacos neutra green juice </h2>*/}
+        {/*      </div>*/}
+        {/*      <img src={arrow} alt="" width="28px" className="ml-2 " />*/}
+        {/*    </div>*/}
+        
+        {/*    <div className="article">*/}
+        {/*      <div>*/}
+        {/*        <h5>SEO</h5>*/}
+        {/*        <h2>iPhone organic green waistcoat </h2>*/}
+        {/*      </div>*/}
+        {/*      <img src={arrow} alt="" width="28px" className="ml-2 " />*/}
+        {/*    </div>*/}
+        
+        {/*  </div>*/}
+        {/*</div>*/}
+
+
 
         <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
                         secondTapeScroll={true}

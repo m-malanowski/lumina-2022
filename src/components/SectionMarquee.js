@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 
-const SectionMarquee = ({ firstTape, secondTape, thirdTape, onScroll, subSectionMarqueeTitle ,firstTapeScroll, secondTapeScroll, thirdTapeScroll, dataScrollPosition, dataScrollSpeed, fourthTapeScroll, title  }) => {
+const SectionMarquee = ({ className ,firstTape, secondTape, thirdTape, onScroll, subSectionMarqueeTitle ,firstTapeScroll, secondTapeScroll, thirdTapeScroll, dataScrollPosition, dataScrollSpeed, fourthTapeScroll, title  }) => {
   const [playMarquee, setPlayMarquee] = useState(false)
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const SectionMarquee = ({ firstTape, secondTape, thirdTape, onScroll, subSection
 
   return (
     <>
-      <section className="section-marquee">
+      <section className={`section-marquee ${className}`}>
         {/*<section className="section-marquee break-out">*/}
         <div className="tapes-container">
           {
@@ -165,8 +165,8 @@ const FourthTapeScroll = ({dataScrollPosition, dataScrollSpeed}) => {
 const SubSectionMarqueeTitle = ({dataScrollPosition, dataScrollSpeed, title}) => {
   return (
     <>
-      <div className="first-tape-wrapper">
-        <div className="first-tape"
+      <div className="second-tape-wrapper">
+        <div className="second-tape"
              data-scroll
              data-scroll-speed={dataScrollSpeed}
              data-scroll-position={dataScrollPosition}

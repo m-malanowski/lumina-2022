@@ -6,7 +6,8 @@ import TriggerText from "../components/TriggerText"
 import TriggerImg from "../components/TriggerImg"
 // import {motion, useTransform, useViewportScroll} from "framer-motion"
 // import orbitMain from "../assets/icons/orbitMainView.png"
-const Worldwide = () => {
+import logo from "../assets/logo.svg"
+const Worldwide = ({isGlobe}) => {
 
   // const { scrollYProgress } = useViewportScroll()
   // const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [ .1, .2, 120])
@@ -27,31 +28,34 @@ const Worldwide = () => {
       {/*</TriggerImg>*/}
 
       <div className="worldwide-container">
-        {/*<TriggerImg delay={.15}>*/}
           <img
             className="worldwide-star " width="500" src={star} alt="Agencja interaktywna lumina studio"
           />
-        {/*</TriggerImg>*/}
-
 
         <TriggerText threshold=".2" delay=".35">
           <h2 className=" w-100">Lumina Std</h2>
         </TriggerText>
+        {/*<img src={logo} width="20%" alt="" />*/}
         <TriggerText threshold=".2" delay=".45">
           <h3>worldwide</h3>
         </TriggerText>
-
-        <TriggerImg delay={.5} threshold={0}>
-          <img
-            data-scroll
-            // data-scroll-speed="2"
-            className="globe" width="125" src={globe} alt="Agencja interaktywna lumina studio" />
-        </TriggerImg>
-
+        { isGlobe ? <Globe /> : null }
       </div>
     </section>
   )
 }
+
+const Globe = () => {
+  return (
+    <TriggerImg delay={.5} threshold={0}>
+      <img
+        data-scroll
+        // data-scroll-speed="2"
+        className="globe" width="125" src={globe} alt="Agencja interaktywna lumina studio" />
+    </TriggerImg>
+  )
+}
+
 
 export default Worldwide
 

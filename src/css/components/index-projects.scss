@@ -32,13 +32,17 @@
       font-family: var(--ff-secondary-bold);
       //&:nth-of-type(odd){
       display: flex;
+      gap: .5rem;
       &:after{
-        //content: '/';
-        content: "";
-        background: url("../assets/icons/right-arrow.svg") no-repeat;
-        //font-family: var(--ff-secondary-lig);
-        width: 50px;
-        vertical-align: text-bottom;
+        content: '/';
+        //content: "";
+        //background: url("../assets/icons/arrow-right-down.svg") no-repeat;
+        font-family: var(--ff-secondary-lig);
+        width: 30px;
+        //margin: 0 1.25rem;
+        transform: scaleY(1.6) scaleX(.8);
+        //vertical-align: text-bottom;
+        //transform: translateY(3.5rem);
       }
       //}
       &:hover{

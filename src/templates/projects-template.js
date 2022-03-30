@@ -41,13 +41,7 @@ const ProjectTemplate = ({ data }) => {
       >
 
         <main className="single-project-page container-fluid" data-scroll-container ref={containerRef}>
-          {/*<TriggerImg delay={1}>*/}
-          {/*  <img*/}
-          {/*    data-scroll*/}
-          {/*    data-scroll-speed="-2"*/}
-          {/*    data-scroll-position="top"*/}
-          {/*    className="orbit" width="1000" src={orbitSingleProject} alt="" />*/}
-          {/*</TriggerImg>*/}
+
           <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
                           secondTapeScroll={false}  fourthTapeScroll={false}
                           thirdTapeScroll={false}
@@ -56,18 +50,6 @@ const ProjectTemplate = ({ data }) => {
                           dataScrollPosition="bottom" dataScrollSpeed="2" />
 
           <div className="subsec-header">
-            {/*<h5 className="">01.</h5>*/}
-            {/*<h2 className="subsec-title">{data.project.title}</h2>*/}
-
-
-
-
-            {/*<TriggerText threshold=".5" delay=".1">*/}
-            {/*  <h2*/}
-            {/*    data-scroll*/}
-            {/*    data-scroll-speed="1"*/}
-            {/*  >{data.project.title}</h2>*/}
-            {/*</TriggerText>*/}
 
           </div>
 
@@ -78,7 +60,7 @@ const ProjectTemplate = ({ data }) => {
             <div className="subsec-desc">
               <TriggerText threshold=".25" delay=".15">
                 <p>{data.project.desc}</p>
-                <MainBtn title="Strona www"/>
+                <MainBtn url={data.project.link} title="Strona www"/>
 
               </TriggerText>
             </div>
@@ -89,19 +71,16 @@ const ProjectTemplate = ({ data }) => {
 
 
           <div className="single-project-body break-out">
-            {/*<TriggerImg delay="1">*/}
               <div className="imgs-wrapper">
 
                 {data.project.media.map(imgy => (
                   <TriggerImg delay=".25">
 
                     <div key={imgy.id}>
-                      {/*<GatsbyImage image={image} alt="elo elo" />*/}
                       <img key={imgy.id}
                            className="" width="900" src={imgy.url} alt=""
                            data-scroll
                            data-scroll-speed="1"
-
                       />
                     </div>
 
@@ -110,16 +89,8 @@ const ProjectTemplate = ({ data }) => {
                 ))}
 
               </div>
-            {/*</TriggerImg>*/}
 
           </div>
-
-          {/*<ContactSubsec/>*/}
-          {/*<SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}*/}
-          {/*                secondTapeScroll={true}*/}
-          {/*                thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2" />*/}
-          {/*<LowerFooter />*/}
-
 
           <Foooter/>
 
@@ -137,6 +108,7 @@ export const query = graphql`
       title
       desc
       services
+      link
       date(formatString: "MMMM YYYY", locale: "pl")
       media {
         url

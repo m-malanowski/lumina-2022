@@ -153,27 +153,26 @@ const AgencjaInteraktywnaRealizacje = ({ data }) => {
             {/*</section>*/}
 
 
-            <ProjectsSubsectionNew/>
+            {/*<ProjectsSubsectionNew/>*/}
 
             {/*<TriggerImg threshold="" delay="1">*/}
 
             {/*  /!*<Scene/>*!/*/}
 
-            {/*  <div className="new-section-works-container">*/}
-            {/*    {data.allStrapiProjects.nodes.map(node => (*/}
+              <div className="new-section-works-container">
+                {data.allStrapiProjects.nodes.map(node => (
 
-            {/*      // <TriggerImg threshold="" delay="1">*/}
-            {/*      <div style={{ backgroundImage: `url(${node.cover.url})` }}>*/}
-            {/*        <Link to={"/agencja-interaktywna-realizacje/" + node.slug}>*/}
-            {/*          /!*<div>*!/*/}
-            {/*          /!*  <h2>{node.title}</h2>*!/*/}
-            {/*          /!*  <p>{node.services}</p>*!/*/}
-            {/*          /!*</div>*!/*/}
-            {/*        </Link>*/}
-            {/*      </div>*/}
-            {/*    ))}*/}
-            {/*  </div>*/}
-            {/*</TriggerImg>*/}
+                  // <TriggerImg threshold="" delay="1">
+                  <div style={{ backgroundImage: `url(${node.cover.url})` }}>
+                    <Link to={"/agencja-interaktywna-realizacje/" + node.slug}>
+                      {/*<div>*/}
+                      {/*  <h2>{node.title}</h2>*/}
+                      {/*  <p>{node.services}</p>*/}
+                      {/*</div>*/}
+                    </Link>
+                  </div>
+                ))}
+              </div>
 
           </div>
 

@@ -19,7 +19,7 @@ const Navbar = ({ toggleSideBar, isOpen }) => {
 
         <TriggerText threshold=".5" delay="4">
           <a href="/" className={`navbar-logo ${isOpen? "closed" : "open"}`}>
-            <img src={logo} width={150} alt="Lumina Studio - Agencja Interaktywna" />
+            {/*<img src={logo} width={150} alt="Lumina Studio - Agencja Interaktywna" />*/}
           </a>
         </TriggerText>
         {/*<h3>*/}
@@ -39,7 +39,14 @@ const Navbar = ({ toggleSideBar, isOpen }) => {
 
       {/*<PageLinks styleClass="nav-links"/>*/}
 
-      <img className='rotating-star' src={globeRotating} width={30} alt="" />
+      {/*<img className='rotating-star' src={globeRotating} width={30} alt="" />*/}
+      <TriggerText threshold=".5" delay="4">
+        <button type="button" className="toggle-btn" onClick={toggleSideBar} aria-label="menu-button">
+          <div className={`nav-icon ${isOpen? "transformed" : ""}`}>
+            <div/>
+          </div>
+        </button>
+      </TriggerText>
 
       <div className="navbar-right">
         {/*<TriggerText threshold=".5" delay="4">*/}
@@ -53,14 +60,9 @@ const Navbar = ({ toggleSideBar, isOpen }) => {
         {/*  data-scroll-speed="-1"*/}
         {/*  title="hello@lumina.studio" url="/agencja-interaktywna-realizacje"/>*/}
 
+        <img src={logo} width={150} alt="Lumina Studio - Agencja Interaktywna" />
 
-        <TriggerText threshold=".5" delay="4">
-          <button type="button" className="toggle-btn" onClick={toggleSideBar} aria-label="menu-button">
-            <div className={`nav-icon ${isOpen? "transformed" : ""}`}>
-              <div/>
-            </div>
-          </button>
-        </TriggerText>
+
       </div>
 
     </nav>

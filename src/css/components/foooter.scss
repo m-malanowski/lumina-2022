@@ -1,6 +1,7 @@
 .foooter{
-  margin: 5rem 0 2.5rem 0;
-  padding: 10rem 0 25rem 0;
+  margin: 10rem 0 5rem 0;
+  //padding: 10rem 0 25rem 0;
+  //padding: 10rem 0 2.5rem 0;
   & > div{
     display: grid;
     gap: 5rem;
@@ -18,10 +19,10 @@
     margin: 2.5rem 0 0 0;
     font-size: 12px;
   }
-  .foooter-logo{
-    animation: squiggly-anim 0.25s steps(2) infinite;
-    display: inline-block;
-  }
+  //.foooter-logo{
+  //  animation: squiggly-anim 0.25s steps(2) infinite;
+  //  display: inline-block;
+  //}
   .main-btn{
     width: 90%;
     margin-top: 2.5rem;
@@ -67,6 +68,9 @@
       //filter: invert(53%) sepia(24%) saturate(1412%) hue-rotate(231deg) brightness(81%) contrast(92%);
       &:hover{
         filter: invert(97%) sepia(66%) saturate(1013%) hue-rotate(16deg) brightness(102%) contrast(98%);
+        -webkit-animation: squiggly-anim 0.25s steps(2) infinite;
+        animation: squiggly-anim 0.25s steps(2) infinite;
+        display: inline-block;
       }
     }
   }

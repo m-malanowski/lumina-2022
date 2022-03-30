@@ -16,6 +16,8 @@ import AboutSectionAccordion from "../components/AboutSectionAccordion"
 import { Link } from "gatsby"
 import Foooter from "../components/Foooter"
 import trueStar from "../assets/icons/true-star.svg"
+import StickyServices from "../components/StickyServices"
+import BreakoutMarquee from "../components/BreakoutMarquee"
 
 
 // ...GatsbyImageSharpFluid
@@ -87,17 +89,18 @@ const ONas = () => {
             {/*  </div>*/}
             {/*</div>*/}
             <div className="new-subsec-body">
-              <div className="subsec-span-wprapper">
 
-                <TriggerImg threshold="1" delay=".4">
-                  {/*<div className="star"></div>*/}
-                  <img className='rotating-star' src={trueStar} width={30} alt="" />
-                </TriggerImg>
+              {/*<div className="subsec-span-wprapper">*/}
+              {/*  <TriggerImg threshold="1" delay=".4">*/}
+              {/*    /!*<div className="star"></div>*!/*/}
+              {/*    <img className='rotating-star' src={trueStar} width={30} alt="" />*/}
+              {/*  </TriggerImg>*/}
 
-                <TriggerText threshold="1" delay=".5">
-                  <span className="subsec-span">Why we do what we do</span>
-                </TriggerText>
-              </div>
+              {/*  <TriggerText threshold="1" delay=".5">*/}
+              {/*    <span className="subsec-span">Why we do what we do</span>*/}
+              {/*  </TriggerText>*/}
+              {/*</div>*/}
+
               <TriggerText threshold=".5" delay=".7">
                 <p>
                   Tacos neutra green juice YOLO. Succu lents artisan keytar beard fanny pack gentrify. Lyft craf ta it
@@ -194,10 +197,10 @@ const ONas = () => {
                       <h3>Web development</h3>
                     </div>
                     <div>
-                      <p>Gluten-free skateboard YOLO, fam semiotics deep v selfies
-                        farm-to-table <em>asymmetrical</em> vice fashion axe tacos pug helvetica. Tote bag before they
+                      <p><em>Gluten-free skateboard YOLO, fam semiotics deep v selfies
+                        farm-to-table asymmetrical vice fashion axe tacos pug helvetica. Tote bag before they
                         sold out bespoke, health goth food truck chillwave copper mug quinoa poke bitters. Brooklyn la
-                        croix microdosing.
+                        croix microdosing.</em>
                       </p>
                     </div>
 
@@ -259,29 +262,16 @@ const ONas = () => {
 
           <Worldwide />
 
-          <section className="articles-subsection">
-            <div className="subsec-header">
-              <TriggerText threshold=".25" delay=".25">
-                <h2 className="subsec-title">Artykuły</h2>
-                <br />
-                <p>Zapoznaj się z artykułami</p>
-              </TriggerText>
-              <TriggerText threshold=".25" delay=".25">
-                <span className="">03.</span>
-              </TriggerText>
-            </div>
 
-            <section className="services-page-slider break-out">
-              <TriggerText threshold=".25" delay=".3">
-                <ArticlesSlider />
-              </TriggerText>
-            </section>
-          </section>
+
+          <StickyServices/>
+          <BreakoutMarquee/>
+          <ArticlesSlider />
 
           {/*<AboutSectionAccordion/>*/}
 
           <ContactSubsec />
-          <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
+          <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
                           secondTapeScroll={true}
                           thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2" />
           <Foooter />

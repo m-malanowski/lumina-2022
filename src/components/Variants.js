@@ -45,11 +45,16 @@ const commonVariants = {
 const layoutVariants = {
   initial: {
     opacity: 0,
-    filter: 'blur(100px)'
+    filter: 'blur(100px)',
+    // transform: 'scale(.2)',
+    // transform: 'translate3d(0px, 100vh, 0px)',
   },
   enter: {
     opacity: 1,
     filter: 'blur(0px)',
+    // transform: 'translate3d(0px, 0vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg);',
+    // transform: 'translate3d(0px, 0vh, 0px)',
+    // transform: 'scale(1)',
     transition: {
       duration: .6,
       delay: .2,
@@ -60,6 +65,9 @@ const layoutVariants = {
   exit: {
     opacity: 0,
     filter: 'blur(100px)',
+    // transform: 'translate3d(1220px, 110vh, 220px) scale3d(1, 1, 1) rotateX(10deg) rotateY(10deg) rotateZ(110deg) skew(10deg);',
+    // transform: 'scale(.2)',
+    // transform: 'translate3d(0px, 100vh, 0px)',
     transition: {
       delay: .45,
       duration: .8,

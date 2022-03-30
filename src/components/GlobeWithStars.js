@@ -5,6 +5,8 @@ import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 import TriggerImg from "./TriggerImg"
 import globe from "../assets/icons/globe.svg"
+import chrome from "../assets/imgs/chrome.png"
+
 // ...GatsbyImageSharpFluid
 
 const GlobeWithStars = () => {

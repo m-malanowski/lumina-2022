@@ -114,9 +114,9 @@ const Layout = ({ children, location }) => {
         {/*       src="https://spacecadet.ventures/wp-content/themes/spacecadet-ventures/asset/animation/stars.mp4"*/}
         {/*       autoPlay loop muted ></video>*/}
 
-        <div className="light-container" id="low-light">
-          <div className="dark"></div>
-        </div>
+        {/*<div className="light-container" id="low-light">*/}
+        {/*  <div className="dark"></div>*/}
+        {/*</div>*/}
 
       </AnimatePresence>
     </>

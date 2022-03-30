@@ -106,21 +106,20 @@ Fake Loader && Page Transition
   //  width: 120px;
   //}
 
-  &::before {
-    background-image: url(../assets/grain.png);
-    background-size: 280px 280px;
-    background-repeat: repeat;
-    content: "";
-    height: 300%;
-    left: -50%;
-    opacity: .2;
-    position: fixed;
-    top: -100%;
-    width: 300%;
-    animation: grain 10s steps(10) infinite;
-    z-index: -1;
-
-  }
+  //&::before {
+  //  background-image: url(../assets/grain.png);
+  //  background-size: 280px 280px;
+  //  background-repeat: repeat;
+  //  content: "";
+  //  height: 300%;
+  //  left: -50%;
+  //  opacity: .2;
+  //  position: fixed;
+  //  top: -100%;
+  //  width: 300%;
+  //  animation: grain 10s steps(10) infinite;
+  //  z-index: -1;
+  //}
 }
 
 

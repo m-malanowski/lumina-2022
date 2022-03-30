@@ -10,8 +10,11 @@ import smallStar from "../assets/icons/smallStar.svg"
 import TriggerText from "../components/TriggerText"
 import TriggerImg from "../components/TriggerImg"
 import SectionMarquee from "../components/SectionMarquee"
+import StickyServices from "../components/StickyServices"
 import LowerFooter from "../components/LowerFooter"
-import arrow from "../assets/icons/right-arrow.svg"
+// import arrow from "../assets/icons/right-arrow.svg"
+import motive from "../assets/icons/motive.svg"
+import BreakoutMarquee from "../components/BreakoutMarquee"
 import { LocomotiveScrollProvider } from "react-locomotive-scroll"
 import orbitMoreSection from "../assets/icons/orbitMoreSection.svg"
 import ArticlesSlider from "../components/ArticlesSlider"
@@ -28,8 +31,21 @@ import MainBtn from "../components/MainBtn"
 import trueStar from "../assets/icons/true-star.svg"
 import GlobeWithStars from "../components/GlobeWithStars"
 import SuperNewIndexProjects from "../components/SuperNewIndexProjects"
+import sparkle from "../assets/icons/sparkle.png"
+import Process from "../components/Process"
+import logo from "../assets/logo.svg"
+// import elo4 from "../assets/imgs/elo4.webp"
+import elo4 from "../assets/imgs/3.png"
+import stars from "../assets/imgs/stars.svg"
+import heart from "../assets/icons/heart.svg"
+import chrome from "../assets/imgs/chrome2.png"
+import arrowCircle from "../assets/icons/arrow-in-circle.svg"
+import arrow from "../assets/icons/arrow-in-circle.svg"
+import bg from "../assets/imgs/bg.jpg"
+import SkewImages from "../components/SkewImages"
+import AboutSectionAccordion from "../components/AboutSectionAccordion"
 
-const HomePage = () => {
+const HomePage = ({ data }) => {
 
   const containerRef = useRef(null)
 
@@ -104,153 +120,97 @@ const HomePage = () => {
         }
         containerRef={containerRef}
       >
+        <div className="noise-holder">
+          <div className="noise"></div>
+        </div>
 
         <main className="index-page container-fluid" data-scroll-container ref={containerRef}>
 
-          <motion.div
-            // // style={{overflow: "hidden"}}
-            // initial={{ opacity: 0 }}
-            // animate={{
-            //   opacity: 1,
-            //   transition: {
-            //     delay: 3.8,
-            //     duration: 1,
-            //     ease: [0.6, 0.01, -0.05, 0.9]
-            //   }
-            // }}
-            className="index-page">
 
-            {/*<section className="section-main-container">*/}
-            {/*  <div className="main-container">*/}
-            
-            {/*    <TriggerText threshold=".5" delay="4">*/}
-            {/*      <h2*/}
-            {/*        data-scroll*/}
-            {/*        data-scroll-speed="-1"*/}
-            {/*        data-scroll-direction="horizontal"*/}
-            {/*      >We are a brand</h2>*/}
-            
-            {/*    </TriggerText>*/}
-            
-            {/*    <TriggerText threshold=".5" delay="4.2">*/}
-            {/*      <h2*/}
-            {/*        data-scroll*/}
-            {/*        data-scroll-speed="-3"*/}
-            {/*        data-scroll-direction="horizontal"*/}
-            {/*      >of collective</h2>*/}
-            {/*    </TriggerText>*/}
-            
-            {/*    <TriggerText threshold=".5" delay="4.3">*/}
-            {/*      <h2*/}
-            {/*        data-scroll*/}
-            {/*        data-scroll-speed="1"*/}
-            {/*        data-scroll-direction="horizontal"*/}
-            {/*      ><span>creativity</span></h2>*/}
-            
-            {/*    </TriggerText>*/}
-            
-            {/*    /!*<div className="scroll-down">*!/*/}
-            {/*    /!*  <TriggerImg delay={1.2}>*!/*/}
-            {/*    /!*    <img width="100" className="index-hand" src={handDown} alt="" />*!/*/}
-            {/*    /!*  </TriggerImg>*!/*/}
-            {/*    /!*</div>*!/*/}
-            
-            {/*    <div className="stars-wrapper">*/}
-            {/*      <div className="star star-one"></div>*/}
-            {/*      <div className="star star-two"></div>*/}
-            {/*      <div className="star star-three"></div>*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</section>*/}
+          <motion.div className="index-page">
 
+            <div className="baba">
+              {/*<div className="stars-wrapper">*/}
+              {/*  <div className="star star-one"></div>*/}
+              {/*  <div className="star star-two"></div>*/}
+              {/*  <div className="star star-three"></div>*/}
+              {/*</div>*/}
+              <p>
+                Everything <br />
+                you <em>need</em> to know <br />
+                about
 
-            <section className="section-main-container">
-              <TriggerText threshold=".5" delay="3.4">
+                {/*Uwolnij <br/>*/}
+                {/*potencjał <br/>*/}
+                {/*swojej marki*/}
+              </p>
 
-                <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
-                                secondTapeScroll={true} thirdTapeScroll={true} fourthTapeScroll={false}
-                                dataScrollPosition="top" dataScrollSpeed="-10" />
+              <Link to="/kontakt" className="mt-5 test-btn">Rozpocznij projekt</Link>
 
-              </TriggerText>
+            </div>
 
-            </section>
+            <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
+                            secondTapeScroll={true} thirdTapeScroll={true} dataScrollPosition="top"
+                            className="main-view"
+                            dataScrollSpeed="4" />
 
+            {/*<Worldwide isGlobe={false} />*/}
 
-            {/*<section>*/}
-            {/*  <div className="">*/}
-            {/*    <div className="subsec-body">*/}
-            {/*      <div className="ss-body-first">*/}
-            {/*      </div>*/}
-            {/*      <div className="ss-body-second">*/}
-            {/*        <TriggerText threshold="0" delay=".5">*/}
-            {/*          <p> Nasza agencja specjializuję się w tworzeniu aplikacji internetowych oraz <em> identyfikacji wizualnej </em> dla firm.*/}
-            {/*            Przykładamy dużą uwagę do długofalowych relacji, opartych na wzajemnym zaufaniu.*/}
-            {/*          </p>*/}
-            {/*        </TriggerText>*/}
-
-            {/*        <TriggerText threshold="0" delay=".35">*/}
-            {/*          <span className="subsec-span">Lumina Studio</span>*/}
-            {/*        </TriggerText>*/}
-            {/*      </div>*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</section>*/}
-
-            {/*<section className="cta-section">*/}
-            {/*  <h2>Let's partner up!</h2>*/}
-            {/*  <p>Send us an email with a brief description of your <br/> company and*/}
-            {/*    suggestions on our future cooperation </p>*/}
-
-            {/*  <div className="service-title">*/}
-            {/*    <h5>Dowiedz się więcej</h5>*/}
-            {/*    <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />*/}
-            {/*  </div>*/}
-
-            {/*  <div className="stars-wrapper">*/}
-            {/*    <div className="star star-one"></div>*/}
-            {/*    <div className="star star-two"></div>*/}
-            {/*    <div className="star star-three"></div>*/}
-            {/*  </div>*/}
-            {/*</section>*/}
-
-
-            {/*<Worldwide />*/}
 
             <section className="index-about">
-
               <div className="bg-dots index">
                 <div className="item item-1" data-scroll data-scroll-speed="-2"></div>
                 <div className="item item-2" data-scroll data-scroll-speed="-1"></div>
               </div>
 
               <div className="new-subsec-body">
-                <div className="subsec-span-wprapper">
-
-                  <TriggerImg>
-                    {/*<div className="star"></div>*/}
-                    <img className='rotating-star' src={trueStar} width={30} alt="" />
-                  </TriggerImg>
-
-                  <TriggerText threshold=".35" delay=".35">
-                    <span
-                      data-scroll
-                      data-scroll-speed="-3.5"
-                      className="subsec-span">Why we do what we do</span>
-                  </TriggerText>
-                </div>
-                <TriggerText threshold=".45" delay=".35">
-                  <p
-                    data-scroll
-                    data-scroll-speed="-.5"
-                  >
-                    Brooklyn man bun intelligentsia selfies shaman, meggings godard slow-carb flannel. Ramps
-                    church-key umami dreamcatcher <em>jean chips </em> next level brooklyn marfa VHS bitters scen.
+                <TriggerText threshold=".45" delay=".25"
+                             data-scroll
+                             data-scroll-speed="-.5">
+                  <p className="subsec-body__description">
+                    Brooklyn man bun intelligentsia selfies shaman, flannel. Ramps
+                    church-key umami dream catcher jean chips <em>next level brooklyn</em> mafia VHS bitters scen.
                   </p>
                 </TriggerText>
-
               </div>
 
-              <div className="about-description-wrapper">
+              <section className="test-section">
+
+                <div>
+                  <img src={arrowCircle} alt="" width="80px"
+                       className="align-self-end service__img test-section__img mt-1" />
+                  {/*<div className="stars-wrapper">*/}
+                  {/*  <div className="star star-one"></div>*/}
+                  {/*  <div className="star star-two"></div>*/}
+                  {/*  <div className="star star-three"></div>*/}
+                  {/*</div>*/}
+                </div>
+                <TriggerText threshold=".45" delay=".35"
+                             data-scroll
+                             data-scroll-speed="-.5"
+                >
+                  <h2>Once again Ranboo defies the odds with the 2k21 Ranboo collection. </h2>
+                </TriggerText>
+
+                <TriggerText threshold=".45" delay=".45"
+                             data-scroll
+                             data-scroll-speed="-.5"
+                >
+                  <h2 className="mb-5">A collection of bad ideas come to fruition as real products for you to
+                    experience.
+                    <br /><br />
+                    The collection contains a range of products designed to emulate his signature black and white style.
+                    With the Ranboo collection, you can take a bad idea and make it your own.
+                  </h2>
+                </TriggerText>
+              </section>
+              {/*<img width="100%" src={chrome} alt="Lumina Studio - Agencja Interaktywna" />*/}
+
+              <SkewImages />
+
+              {/*<Worldwide isGlobe={false} />*/}
+
+              <section className="about-description-wrapper">
 
                 <div className="stars-wrapper">
                   <div className="star star-one"></div>
@@ -277,201 +237,118 @@ const HomePage = () => {
                     <p
                       data-scroll
                       data-scroll-speed="-1"
-                    >Meh health goth whatever bushwick knausgaard, gentrify lumbersexual helvetica squid <em>YOLO</em> brunch.
+                    >Meh health goth whatever bushwick knausgaard, gentrify lumbersexual helvetica
+                      squid <em>YOLO</em> brunch.
                       Venmo occupy lumbersexual cliche.
                     </p>
                   </TriggerText>
 
                   {/*<TriggerText threshold=".5" delay=".8">*/}
-                    {/*<p>IPhone pop-up la croix salvia hell of franzenly haven't heard of them. </p>*/}
+                  {/*<p>IPhone pop-up la croix salvia hell of franzenly haven't heard of them. </p>*/}
                   {/*</TriggerText>*/}
                 </div>
-              </div>
-
-              <Worldwide />
-
-
-              <div className="subsec-header">
-
-                <TriggerText threshold=".5" delay=".5">
-                  <h2 className="subsec-title">Usługi</h2>
-                </TriggerText>
-
-                <TriggerText threshold=".5" delay=".5">
-                  <span className="">01.</span>
-                </TriggerText>
-              </div>
-            </section>
-
-            <section className="index-services">
-              <div className="wrapper">
-                <div>
-
-                  <TriggerText threshold=".4" delay=".4">
-                    <div className="service-title">
-                      <h5>Design</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-                  <TriggerText threshold=".4" delay=".5">
-                    <div className="service-title">
-                      <h5>Branding</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-                  <TriggerText threshold=".4" delay=".6">
-                    <div className="service-title">
-                      <h5>Digital</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-                </div>
-                <div>
-                  <TriggerText threshold=".4" delay=".7">
-                    <div className="service-title">
-                      <h5>Ecommerce</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-
-                  <TriggerText threshold=".4" delay=".8">
-                    <div className="service-title">
-                      <h5>Web development</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-                  <TriggerText threshold=".4" delay=".9">
-                    <div className="service-title">
-                      <h5>Social media</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-                </div>
-                <div>
-                  <TriggerText threshold=".4" delay="1">
-                    <div className="service-title">
-                      <h5>Strategy</h5>
-                      <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />
-                    </div>
-                  </TriggerText>
-
-                </div>
-
-              </div>
-
-
-            </section>
-
-            <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
-                            secondTapeScroll={false} thirdTapeScroll={false} dataScrollPosition="bottom"
-                            dataScrollSpeed="6" />
-
-
-            <section className="new-index-projects">
-              {/*<Worldwide />*/}
-
-              {/*<TriggerImg delay={.5} threshold={0}>*/}
-              {/*  <div className="globe-stars-wrapper stars-wrapper">*/}
-              {/*    <img className="globe mb-5" width="125" src={globe} alt="Agencja interaktywna lumina studio" />*/}
-              {/*      <div className="star star-one"></div>*/}
-              {/*      <div className="star star-two"></div>*/}
-              {/*      <div className="star star-three"></div>*/}
-              {/*  </div>*/}
-              {/*</TriggerImg>*/}
-
-              <div className="subsec-header">
-                <TriggerText threshold=".5" delay=".5">
-                  <h2 className="subsec-title">Some our works <br /> to keep an eye on</h2>
-                </TriggerText>
-                <TriggerText threshold=".5" delay=".5">
-                  <span className="">02.</span>
-                </TriggerText>
-              </div>
-
-
-              {/*<SuperNewIndexProjects ></SuperNewIndexProjects>*/}
-
-              <TriggerText threshold=".25" delay=".25">
-                <IndexProjects></IndexProjects>
-              </TriggerText>
-
-              {/*<Link to="/kontakt" className="cta-btn" > Rozpocznij projekt </Link>*/}
-
-              {/*<a href="" className="test-btn mb-5">Więcej projektów</a>*/}
-
-
-              {/*<MainBtn*/}
-              {/*  data-scroll*/}
-              {/*  data-scroll-speed="-1"*/}
-              {/*  title="Więcej projektów" url="/agencja-interaktywna-realizacje"/>*/}
-
-              {/*<div className="projects-btn">*/}
-              {/*  <div className="service-title">*/}
-              {/*    <h5>Sprawdź więcej projektów</h5>*/}
-              {/*    <img src={arrow} alt="" width="28px" className="ml-2 align-self-start" />*/}
-              {/*  </div>*/}
-              {/*</div>*/}
-
-              {/*<MainBtn*/}
-              {/*  data-scroll*/}
-              {/*  data-scroll-speed="-1"*/}
-              {/*  title="Więcej projektów" url="/agencja-interaktywna-realizacje"/>*/}
-
-              <GlobeWithStars/>
-
-            </section>
-
-
-            {/*<ProjectsSubsectionNew />*/}
-
-            <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
-                            secondTapeScroll={true} thirdTapeScroll={false} dataScrollPosition="top"
-                            dataScrollSpeed="4" />
-
-
-            <section className="articles-subsection">
-              <div className="subsec-header">
-                <TriggerText threshold=".3" delay=".35">
-                  <h2 className="subsec-title">Artykuły</h2>
-                  <br />
-                  <p>Zapoznaj się z artykułami</p>
-                </TriggerText>
-                <TriggerText threshold=".3" delay=".35">
-                  <span className="">03.</span>
-                </TriggerText>
-              </div>
-
-              <section className="services-page-slider break-out">
-                <TriggerText threshold=".3" delay=".35">
-                  <ArticlesSlider />
-                </TriggerText>
               </section>
+
             </section>
 
+            {/*<Process />*/}
+            <Worldwide />
 
+            <div className="new-subsec-body">
+              <TriggerText threshold=".45" delay=".25"
+                           data-scroll
+                           data-scroll-speed="-.5">
+                <p className="subsec-body__description">
+                  Brooklyn man bun intelligentsia selfies shaman, flannel. Ramps
+                  church-key umami dream catcher jean chips <em>next level brooklyn</em> mafia VHS bitters scen.
+                </p>
+              </TriggerText>
+            </div>
+            <Process/>
+            <GlobeWithStars />
+
+            {/*<StickyServices/>*/}
+            {/*<AboutSectionAccordion/>*/}
+
+
+
+            {/*<SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}*/}
+            {/*                secondTapeScroll={true} thirdTapeScroll={true} fourthTapeScroll={false}*/}
+            {/*                dataScrollPosition="center" dataScrollSpeed="-10" />*/}
+
+
+            {/*<SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}*/}
+            {/*                secondTapeScroll={false} thirdTapeScroll={false} dataScrollPosition="bottom"*/}
+            {/*                dataScrollSpeed="6" />*/}
+
+            {/*<section className="new-index-projects">*/}
+            {/*  <TriggerImg delay={.5} threshold={0}>*/}
+            {/*    <div className="globe-stars-wrapper stars-wrapper">*/}
+            {/*      <img className="globe mb-5" width="125" src={globe} alt="Agencja interaktywna lumina studio" />*/}
+            {/*      <div className="star star-one"></div>*/}
+            {/*      <div className="star star-two"></div>*/}
+            {/*      <div className="star star-three"></div>*/}
+            {/*    </div>*/}
+            {/*  </TriggerImg>*/}
+            {/*</section>*/}
+
+            {/*<BreakoutMarquee/>*/}
+            <SuperNewIndexProjects />
+            {/*<Worldwide />*/}
+            <GlobeWithStars />
+
+            {/*<div className="new-subsec-body">*/}
+            {/*  <TriggerText threshold=".45" delay=".25"*/}
+            {/*               data-scroll*/}
+            {/*               data-scroll-speed="-.5">*/}
+            {/*    <p className="subsec-body__description">*/}
+            {/*      Brooklyn man bun intelligentsia selfies shaman, flannel. Ramps*/}
+            {/*      church-key umami dream catcher jean chips <em>next level brooklyn</em> mafia VHS bitters scen.*/}
+            {/*    </p>*/}
+            {/*  </TriggerText>*/}
+            {/*</div>*/}
+            {/*<Process/>*/}
+            {/*<GlobeWithStars />*/}
+            {/*<BreakoutMarquee/>*/}
+
+            <ArticlesSlider />
             <ContactSubsec />
 
-            <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={true}
+            <SectionMarquee firstTape={false} secondTape={false} thirdTape={false} firstTapeScroll={false}
                             secondTapeScroll={true} fourthTapeScroll={false}
                             thirdTapeScroll={true} dataScrollPosition="bottom" dataScrollSpeed="2" />
-            <Foooter/>
+
+            <Foooter />
 
           </motion.div>
 
         </main>
-        {/*<div className="site-loader in"></div>*/}
-
       </LocomotiveScrollProvider>
 
     </>
   )
 }
 
-
+export const query = graphql`
+{
+  allStrapiProjects {
+    nodes {
+      id
+      title
+      slug
+      services
+      cover{
+        url
+                 localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+      }
+      date
+      desc
+    }
+  }
+}
+`
 export default HomePage
